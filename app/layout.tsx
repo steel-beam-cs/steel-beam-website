@@ -45,7 +45,9 @@ export const metadata: Metadata = {
       "Contractor-focused bookkeeping, payroll support, job costing, and business advisory services for construction businesses.",
     images: [
       {
-        url: "/images/steel-beam-banner.png",
+        url: "/images/steel-beam-social-preview.png",
+        width: 1200,
+        height: 630,
         alt: "Steel Beam Contractor Solutions LLC",
       },
     ],
@@ -55,7 +57,7 @@ export const metadata: Metadata = {
     title: "Steel Beam Contractor Solutions LLC",
     description:
       "Contractor-focused bookkeeping, payroll support, job costing, and business advisory services for construction businesses.",
-    images: ["/images/steel-beam-banner.png"],
+    images: ["/images/steel-beam-social-preview.png"],
   },
 };
 
