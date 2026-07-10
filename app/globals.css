@@ -520,6 +520,7 @@ img {
 .panel,
 .contact-card,
 .resource-preview article,
+.resource-preview a,
 .faq-item {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -849,15 +850,173 @@ img {
   gap: 18px;
 }
 
-.resource-preview article {
+.resource-preview article,
+.resource-preview a {
   padding: 24px;
   border-left: 5px solid var(--construction-orange);
+  text-decoration: none;
 }
 
 .resource-preview strong {
   display: block;
   color: var(--construction-orange);
   margin-bottom: 8px;
+}
+
+.resource-link-card {
+  display: block;
+  text-decoration: none;
+}
+
+.resource-link-card strong {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--construction-orange);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.resource-link-card span {
+  display: inline-flex;
+  margin-top: 18px;
+  color: var(--construction-orange);
+  font-weight: 850;
+}
+
+.article-layout {
+  max-width: 900px;
+}
+
+.article-layout h2 {
+  margin: 42px 0 14px;
+  color: var(--charcoal-black);
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.article-layout p,
+.article-layout li {
+  color: #4b5563;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.article-layout .lead {
+  margin-top: 0;
+  color: var(--steel-navy);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  font-weight: 750;
+}
+
+.resource-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.callout-box,
+.calculator-panel,
+.checklist-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.08);
+}
+
+.callout-box {
+  margin: 36px 0;
+  padding: 28px;
+  border-left: 5px solid var(--construction-orange);
+}
+
+.callout-box strong {
+  color: var(--construction-orange);
+  font-weight: 900;
+}
+
+.callout-box p {
+  margin-bottom: 0;
+}
+
+.calculator-panel,
+.checklist-panel {
+  padding: 28px;
+}
+
+.calculator-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.calculator-results {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.calculator-results article {
+  min-height: 120px;
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--steel-navy);
+  color: white;
+}
+
+.calculator-results span {
+  display: block;
+  color: #d1d5db;
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.calculator-results strong {
+  display: block;
+  margin-top: 12px;
+  color: white;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1;
+}
+
+.calculator-note {
+  margin: 22px 0 0;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+.checklist-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.checklist-item {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--concrete-white);
+  font-weight: 750;
+}
+
+.checklist-item input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+}
+
+.checklist-item span {
+  color: var(--steel-navy);
+  line-height: 1.45;
 }
 
 .timeline {
@@ -1275,6 +1434,8 @@ fieldset {
   .journey-beam,
   .journey-beam.detailed,
   .journey-support-grid,
+  .calculator-inputs,
+  .calculator-results,
   .form-grid,
   fieldset {
     grid-template-columns: 1fr;

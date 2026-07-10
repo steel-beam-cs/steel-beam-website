@@ -179,18 +179,18 @@ export default function Home() {
             </Link>
           </div>
           <div className="resource-preview">
-            <article>
+            <Link href="/contractor-success-center/cash-flow-vs-revenue">
               <strong>Article</strong>
               <span>Why cash flow matters more than revenue</span>
-            </article>
-            <article>
+            </Link>
+            <Link href="/contractor-success-center/markup-vs-margin-calculator">
               <strong>Calculator</strong>
               <span>Markup vs. margin calculator</span>
-            </article>
-            <article>
+            </Link>
+            <Link href="/contractor-success-center/monthly-bookkeeping-checklist">
               <strong>Checklist</strong>
               <span>Monthly bookkeeping checklist</span>
-            </article>
+            </Link>
           </div>
         </div>
       </section>

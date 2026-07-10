@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
@@ -40,6 +41,27 @@ const centers = [
   },
 ];
 
+const featuredResources = [
+  {
+    type: "Article",
+    title: "Why cash flow matters more than revenue",
+    text: "A practical explanation of why contractors can look profitable on paper and still feel cash tight.",
+    href: "/contractor-success-center/cash-flow-vs-revenue",
+  },
+  {
+    type: "Calculator",
+    title: "Markup vs. margin calculator",
+    text: "Estimate selling price, gross profit, and margin before you send the next bid.",
+    href: "/contractor-success-center/markup-vs-margin-calculator",
+  },
+  {
+    type: "Checklist",
+    title: "Monthly bookkeeping checklist",
+    text: "A simple month-end checklist for keeping contractor books organized and ready for review.",
+    href: "/contractor-success-center/monthly-bookkeeping-checklist",
+  },
+];
+
 export default function SuccessCenterPage() {
   return (
     <PageShell>
@@ -68,6 +90,26 @@ export default function SuccessCenterPage() {
       </section>
 
       <section className="section section-soft">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Featured resources"
+            title="Start with these contractor business tools."
+            text="These first resources are designed to be practical, direct, and useful before a consultation ever begins."
+          />
+          <div className="card-grid three">
+            {featuredResources.map((resource) => (
+              <Link className="info-card resource-link-card" href={resource.href} key={resource.title}>
+                <strong>{resource.type}</strong>
+                <h3>{resource.title}</h3>
+                <p>{resource.text}</p>
+                <span>Open resource</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container split">
           <div>
             <p className="eyebrow dark">Featured resource</p>
@@ -97,4 +139,3 @@ export default function SuccessCenterPage() {
     </PageShell>
   );
 }
-
