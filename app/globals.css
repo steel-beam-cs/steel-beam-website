@@ -608,12 +608,12 @@ img {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 .split:has(.portrait-card) {
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 48px;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 40px;
 }
 
 .portrait-card {
-  width: 260px;
+  width: 220px;
   max-width: 100%;
   justify-self: start;
   overflow: hidden;
@@ -1102,26 +1102,70 @@ fieldset {
     display: none;
   }
 
+  .header-actions {
+    display: none;
+  }
+
+  .header-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "menu";
+    width: min(1440px, 92%);
+    min-height: 0;
+    padding: 16px 0 18px;
+    gap: 14px;
+    justify-items: stretch;
+  }
+
+  .brand {
+    grid-area: brand;
+    justify-self: center;
+  }
+
+  .brand img {
+    width: 240px;
+  }
+
   .menu-toggle {
-    display: inline-flex;
-    min-height: 48px;
-    min-width: 92px;
-    padding: 12px 20px;
-    font-size: 1rem;
+    grid-area: menu;
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    min-width: 0;
+    margin: 0;
+    padding: 16px 20px;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
   }
 
   .mobile-nav.is-open {
     display: flex;
   }
 
-  .header-inner {
-    width: min(1440px, 92%);
-    gap: 16px;
-    justify-content: space-between;
+  .mobile-nav {
+    gap: 6px;
+    padding: 16px min(1440px, 92%) 24px;
   }
 
-  .mobile-nav {
-    padding-inline: min(1440px, 92%);
+  .mobile-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 16px 14px;
+    font-size: 1.05rem;
+  }
+
+  .mobile-nav-actions {
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 18px;
+  }
+
+  .mobile-nav-actions .button {
+    min-height: 52px;
+    font-size: 1rem;
   }
 
   .trust-row,
@@ -1169,28 +1213,28 @@ fieldset {
 @media (max-width: 760px) {
   .header-inner {
     width: min(1440px, 90%);
-    min-height: 82px;
+    padding: 12px 0 14px;
     gap: 12px;
-    padding-inline: 4px;
   }
 
   .brand img {
     width: 200px;
   }
 
-  .header-actions {
-    display: none;
-  }
-
   .menu-toggle {
-    min-height: 50px;
-    min-width: 96px;
-    padding: 14px 22px;
-    margin-left: 8px;
+    min-height: 54px;
+    padding: 17px 20px;
+    font-size: 1.1rem;
   }
 
   .mobile-nav {
-    padding-inline: min(1440px, 90%);
+    padding: 14px min(1440px, 90%) 22px;
+  }
+
+  .mobile-nav a {
+    min-height: 52px;
+    padding: 17px 14px;
+    font-size: 1.08rem;
   }
 
   .hero {
