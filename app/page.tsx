@@ -22,10 +22,10 @@ export default function Home() {
         <div className="header-inner">
           <a className="brand" href="/" aria-label="Steel Beam home">
             <Image
-              src="/images/steel-beam-logo.png"
+              src="/images/steel-beam-banner.png"
               alt="Steel Beam Contractor Solutions LLC"
-              width={380}
-              height={96}
+              width={420}
+              height={95}
               priority
             />
           </a>
