@@ -24,7 +24,7 @@ const centers = [
   },
   {
     title: "Contractor Calculators",
-    text: "Future tools for profit margin, break-even analysis, labor burden, markup vs. margin, and cash flow planning.",
+    text: "Planned tools for profit margin, break-even analysis, labor burden, markup vs. margin, and cash flow planning.",
   },
   {
     title: "Planning Center",
@@ -36,7 +36,7 @@ const centers = [
   },
   {
     title: "Contractor Success Stories",
-    text: "Future client stories showing how organized financial systems helped contractors gain clarity and confidence.",
+    text: "Coming soon: client stories showing how organized financial systems helped contractors gain clarity and confidence.",
   },
 ];
 
@@ -73,7 +73,7 @@ export default function SuccessCenterPage() {
             <p className="eyebrow dark">Featured resource</p>
             <h2>Monthly Bookkeeping Checklist</h2>
             <p>
-              A future downloadable checklist to help contractors stay current,
+              A planned downloadable checklist to help contractors stay current,
               organized, and prepared for monthly financial reporting.
             </p>
           </div>

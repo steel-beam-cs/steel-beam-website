@@ -8,7 +8,7 @@ import { contact } from "@/components/site-data";
 export const metadata: Metadata = {
   title: "Secure Client Portal",
   description:
-    "Access Steel Beam’s secure ShareFile portal for confidential document exchange, financial records, payroll reports, invoices, and client support.",
+    "Access Steel Beam's secure ShareFile portal for confidential document exchange, financial records, payroll reports, invoices, and client support.",
   alternates: {
     canonical: "/client-portal",
   },
@@ -59,7 +59,7 @@ export default function ClientPortalPage() {
           <div className="panel">
             <h3>First-time user guide</h3>
             <ol className="number-list">
-              <li>Click Access Secure Client Portal.</li>
+              <li>Click the Access Secure Client Portal button.</li>
               <li>Sign in or create your account.</li>
               <li>Select your folder.</li>
               <li>Upload or drag and drop your files.</li>

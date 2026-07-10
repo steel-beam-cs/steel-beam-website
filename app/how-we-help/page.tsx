@@ -18,7 +18,7 @@ const packages = [
   {
     title: "Foundation",
     price: "Starting at $350/month",
-    text: "Monthly bookkeeping, reconciliations, financial statements, monthly review, and email support.",
+    text: "Monthly bookkeeping, reconciliations, financial statements, monthly financial review, and email support.",
   },
   {
     title: "Structural",
