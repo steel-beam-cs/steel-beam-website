@@ -19,15 +19,33 @@ export default function ClientJourneyPage() {
             eyebrow="Six phases"
             title="Every strong structure begins with a plan."
           />
-          <div className="journey-beam detailed">
+          <div className="client-journey-structure" aria-label="The six phases of the Steel Beam Client Journey">
+            <div className="steel-beam-top" aria-hidden="true">
+              <span />
+              <strong>The Steel Beam Client Journey</strong>
+              <span />
+            </div>
+
+            <div className="journey-support-grid">
             {journey.map((item, index) => (
-              <article className="journey-step" key={item.title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{item.title}</h3>
-                <strong>{item.subtitle}</strong>
-                <p>{item.text}</p>
+              <article className="journey-support" key={item.title}>
+                <div className="support-column" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="support-footing" aria-hidden="true" />
+                <div className="journey-step">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{item.title}</h3>
+                  <strong>{item.subtitle}</strong>
+                  <p>{item.text}</p>
+                </div>
               </article>
             ))}
+            </div>
+
+            <div className="steel-beam-base" aria-hidden="true" />
           </div>
         </div>
       </section>
@@ -72,4 +90,3 @@ export default function ClientJourneyPage() {
     </PageShell>
   );
 }
-
