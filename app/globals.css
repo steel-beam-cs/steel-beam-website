@@ -48,7 +48,7 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: min(560px, 58vw);
-  opacity: 0.045;
+  opacity: 0.065;
   mix-blend-mode: multiply;
 }
 
