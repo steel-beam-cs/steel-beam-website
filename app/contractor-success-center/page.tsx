@@ -67,10 +67,16 @@ export default function SuccessCenterPage() {
               organized, and prepared for monthly financial reporting.
             </p>
           </div>
-          <form className="inline-form">
+          <form className="inline-form" action="https://formspree.io/f/mqevryyw" method="POST">
             <label htmlFor="brief-email">Get the Blueprint Brief</label>
-            <input id="brief-email" type="email" placeholder="Email address" />
-            <button className="button button-primary" type="button">
+            <input
+  id="brief-email"
+  name="email"
+  type="email"
+  placeholder="Email address"
+  required
+/>
+            <button className="button button-primary" type="submit">
               Join the list
             </button>
           </form>

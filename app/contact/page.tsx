@@ -16,7 +16,7 @@ export default function ContactPage() {
 
       <section className="section">
         <div className="container contact-layout">
-          <form className="consultation-form">
+        <form className="consultation-form" action="https://formspree.io/f/mqevrylw" method="POST">
             <div className="form-grid">
               <label>
                 Full name
@@ -99,7 +99,7 @@ export default function ContactPage() {
               Yes, I would like to receive the Blueprint Brief.
             </label>
 
-            <button className="button button-primary button-large" type="button">
+            <button className="button button-primary button-large" type="submit">
               Schedule My Free Consultation
             </button>
           </form>
