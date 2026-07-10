@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://steel-beam.org"),
   title: {
     default: "Steel Beam Contractor Solutions LLC",
-    template: "%s | Steel Beam Contractor Solutions LLC",
+    template: "%s | Steel Beam",
   },
   description:
     "Contractor-focused bookkeeping, payroll support, job costing, and business advisory services for construction businesses.",
