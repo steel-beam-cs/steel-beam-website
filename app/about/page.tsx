@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { values } from "@/components/site-data";
+
+export const metadata: Metadata = {
+  title: "About Steel Beam",
+  description:
+    "Learn how Steel Beam Contractor Solutions LLC was built from construction experience, financial leadership, and a commitment to helping contractors strengthen their businesses.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 const milestones = [
   "United States Army service",

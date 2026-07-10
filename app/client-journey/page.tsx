@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { journey } from "@/components/site-data";
+
+export const metadata: Metadata = {
+  title: "The Steel Beam Client Journey",
+  description:
+    "A clear process that guides contractors from first conversation to organized books, reliable reporting, and long-term financial partnership.",
+  alternates: {
+    canonical: "/client-journey",
+  },
+};
 
 export default function ClientJourneyPage() {
   return (

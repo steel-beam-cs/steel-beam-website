@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { journey, services } from "@/components/site-data";
+
+export const metadata: Metadata = {
+  title: "Contractor Bookkeeping & Financial Support",
+  description:
+    "Steel Beam Contractor Solutions LLC helps contractors build stronger businesses through bookkeeping, payroll support, job costing, and practical financial guidance.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const visitorPaths = [
   "I am starting my contracting business.",

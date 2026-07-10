@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { contact } from "@/components/site-data";
+
+export const metadata: Metadata = {
+  title: "Secure Client Portal",
+  description:
+    "Access Steel Beam’s secure ShareFile portal for confidential document exchange, financial records, payroll reports, invoices, and client support.",
+  alternates: {
+    canonical: "/client-portal",
+  },
+};
 
 const uploads = [
   "Bank statements",

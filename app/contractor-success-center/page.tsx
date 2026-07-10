@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
+
+export const metadata: Metadata = {
+  title: "Contractor Success Center",
+  description:
+    "Practical resources, checklists, insights, and tools to help contractors improve bookkeeping, cash flow, job costing, and business systems.",
+  alternates: {
+    canonical: "/contractor-success-center",
+  },
+};
 
 const centers = [
   {

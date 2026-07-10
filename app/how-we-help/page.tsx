@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
 import { services } from "@/components/site-data";
+
+export const metadata: Metadata = {
+  title: "How We Help Contractors",
+  description:
+    "Explore bookkeeping, payroll support, job costing, cleanup, QuickBooks setup, and advisory services built specifically for contractors.",
+  alternates: {
+    canonical: "/how-we-help",
+  },
+};
 
 const packages = [
   {

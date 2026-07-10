@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { contact } from "@/components/site-data";
+
+export const metadata: Metadata = {
+  title: "FAQs",
+  description:
+    "Answers to common questions about working with Steel Beam Contractor Solutions LLC, secure document sharing, payroll, cleanup bookkeeping, pricing, and support.",
+  alternates: {
+    canonical: "/answers",
+  },
+};
 
 const faqs = [
   ["How do I become a client?", "It starts with a free consultation. We learn about your business, answer questions, and recommend the right next step."],
