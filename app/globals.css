@@ -227,7 +227,7 @@ img {
       rgba(7, 24, 39, 0.86) 48%,
       rgba(7, 24, 39, 0.46) 100%
     ),
-    url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2200&q=85")
+    url("/images/homepage-hero-weld.png")
       center / cover no-repeat;
 }
 
