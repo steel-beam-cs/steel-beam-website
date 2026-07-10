@@ -13,6 +13,7 @@ export const navItems = [
   { label: "How We Help", href: "/how-we-help" },
   { label: "Success Center", href: "/contractor-success-center" },
   { label: "Client Journey", href: "/client-journey" },
+  { label: "FAQs", href: "/answers" },
   { label: "Contact", href: "/contact" },
 ];
 
