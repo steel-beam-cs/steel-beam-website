@@ -84,7 +84,7 @@ export default function Home() {
               alt="Adam Davis, founder of Steel Beam Contractor Solutions LLC"
               width={720}
               height={920}
-              sizes="(max-width: 900px) 100vw, 42vw"
+              sizes="260px"
             />
           </div>
           <div>

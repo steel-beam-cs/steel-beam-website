@@ -609,11 +609,13 @@ img {
 }
 
 .portrait-card {
+  width: min(100%, 260px);
+  justify-self: center;
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid var(--line);
   background: #e5e7eb;
-  box-shadow: 0 24px 60px rgba(17, 24, 39, 0.18);
+  box-shadow: 0 18px 42px rgba(17, 24, 39, 0.14);
 }
 
 .portrait-card img {
