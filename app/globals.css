@@ -607,10 +607,13 @@ img {
 .split.reverse {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
-
+.split:has(.portrait-card) {
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1.68fr);
+  gap: 48px;
+}
 .portrait-card {
   width: min(100%, 260px);
-  justify-self: center;
+  justify-self: start;
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid var(--line);
