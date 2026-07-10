@@ -608,11 +608,13 @@ img {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 .split:has(.portrait-card) {
-  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 1.68fr);
+  grid-template-columns: 260px minmax(0, 1fr);
   gap: 48px;
 }
+
 .portrait-card {
-  width: min(100%, 260px);
+  width: 260px;
+  max-width: 100%;
   justify-self: start;
   overflow: hidden;
   border-radius: 8px;
@@ -1102,6 +1104,10 @@ fieldset {
 
   .menu-toggle {
     display: inline-flex;
+    min-height: 48px;
+    min-width: 92px;
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 
   .mobile-nav.is-open {
@@ -1109,7 +1115,13 @@ fieldset {
   }
 
   .header-inner {
+    width: min(1440px, 92%);
+    gap: 16px;
     justify-content: space-between;
+  }
+
+  .mobile-nav {
+    padding-inline: min(1440px, 92%);
   }
 
   .trust-row,
@@ -1148,19 +1160,37 @@ fieldset {
   .contact-card {
     position: static;
   }
+
+  .split:has(.portrait-card) .portrait-card {
+    justify-self: center;
+  }
 }
 
 @media (max-width: 760px) {
   .header-inner {
+    width: min(1440px, 90%);
     min-height: 82px;
+    gap: 12px;
+    padding-inline: 4px;
   }
 
   .brand img {
-    width: 220px;
+    width: 200px;
   }
 
   .header-actions {
     display: none;
+  }
+
+  .menu-toggle {
+    min-height: 50px;
+    min-width: 96px;
+    padding: 14px 22px;
+    margin-left: 8px;
+  }
+
+  .mobile-nav {
+    padding-inline: min(1440px, 90%);
   }
 
   .hero {
