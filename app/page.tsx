@@ -147,13 +147,13 @@ export default function Home() {
             title="A clear process from first conversation to long-term partnership."
             text="Every step is designed to reduce uncertainty and build confidence in your numbers."
           />
-          <div className="journey-beam">
+          <div className="journey-steel-beam" aria-label="Steel Beam Client Journey stages">
             {journey.map((item, index) => (
-              <article className="journey-step" key={item.title}>
+              <div className="journey-beam-stage" key={item.title}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{item.title}</h3>
-                <p>{item.subtitle}</p>
-              </article>
+                <strong>{item.title}</strong>
+                <small>{item.subtitle}</small>
+              </div>
             ))}
           </div>
           <div className="center-actions">

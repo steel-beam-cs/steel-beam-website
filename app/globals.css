@@ -654,6 +654,88 @@ img {
   padding-top: 20px;
 }
 
+.journey-steel-beam {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 38px;
+  isolation: isolate;
+}
+
+.journey-steel-beam::before,
+.journey-steel-beam::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background:
+    linear-gradient(180deg, #f3f4f6 0%, #d1d5db 42%, #9ca3af 100%);
+  box-shadow:
+    inset 0 4px 0 rgba(255, 255, 255, 0.72),
+    inset 0 -4px 0 rgba(75, 85, 99, 0.28);
+}
+
+.journey-steel-beam::before {
+  top: 0;
+  border-radius: 8px 8px 2px 2px;
+}
+
+.journey-steel-beam::after {
+  bottom: 0;
+  border-radius: 2px 2px 8px 8px;
+}
+
+.journey-beam-stage {
+  position: relative;
+  min-height: 148px;
+  padding: 34px 14px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #374151;
+  background:
+    linear-gradient(90deg, rgba(156, 163, 175, 0.95), rgba(243, 244, 246, 0.96) 16%, rgba(209, 213, 219, 0.98) 50%, rgba(156, 163, 175, 0.95));
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.78),
+    inset 0 -1px 0 rgba(17, 24, 39, 0.18);
+}
+
+.journey-beam-stage + .journey-beam-stage {
+  border-left: 2px solid rgba(217, 119, 6, 0.72);
+}
+
+.journey-beam-stage span {
+  margin-bottom: 8px;
+  color: var(--construction-orange);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.journey-beam-stage strong {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.journey-beam-stage small {
+  display: block;
+  max-width: 160px;
+  margin-top: 6px;
+  color: #4b5563;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 .journey-beam.detailed {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top-width: 10px;
@@ -1336,6 +1418,22 @@ fieldset {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .journey-steel-beam {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .journey-steel-beam::before,
+  .journey-steel-beam::after {
+    display: none;
+  }
+
+  .journey-beam-stage {
+    min-height: 132px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 0;
+  }
+
   .journey-support-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     row-gap: 28px;
@@ -1433,12 +1531,41 @@ fieldset {
   .trust-row,
   .journey-beam,
   .journey-beam.detailed,
+  .journey-steel-beam,
   .journey-support-grid,
   .calculator-inputs,
   .calculator-results,
   .form-grid,
   fieldset {
     grid-template-columns: 1fr;
+  }
+
+  .journey-steel-beam {
+    gap: 10px;
+  }
+
+  .journey-beam-stage {
+    min-height: auto;
+    align-items: flex-start;
+    padding: 18px 20px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-left: 8px solid var(--construction-orange);
+    border-radius: 8px;
+    background:
+      linear-gradient(90deg, #9ca3af 0%, #e5e7eb 16%, #f3f4f6 58%, #cbd5e1 100%);
+  }
+
+  .journey-beam-stage + .journey-beam-stage {
+    border-left: 8px solid var(--construction-orange);
+  }
+
+  .journey-beam-stage span {
+    margin-bottom: 5px;
+  }
+
+  .journey-beam-stage small {
+    max-width: none;
   }
 
   .client-journey-structure {
