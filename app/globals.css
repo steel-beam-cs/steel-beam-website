@@ -1243,6 +1243,20 @@ fieldset {
   margin: 0;
 }
 
+.form-message {
+  margin: 0;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.form-message.error {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
 .contact-card {
   position: sticky;
   top: 124px;
