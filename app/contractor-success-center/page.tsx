@@ -43,6 +43,12 @@ const centers = [
 
 const featuredResources = [
   {
+    type: "Cleanup",
+    title: "Behind on your books? Start here.",
+    text: "A practical cleanup bookkeeping path for contractors who need to rebuild their records.",
+    href: "/cleanup-bookkeeping",
+  },
+  {
     type: "Article",
     title: "Why cash flow matters more than revenue",
     text: "A practical explanation of why contractors can look profitable on paper and still feel cash tight.",
@@ -59,6 +65,30 @@ const featuredResources = [
     title: "Monthly bookkeeping checklist",
     text: "A simple month-end checklist for keeping contractor books organized and ready for review.",
     href: "/contractor-success-center/monthly-bookkeeping-checklist",
+  },
+  {
+    type: "Guide",
+    title: "Job costing basics",
+    text: "Learn the core cost categories contractors should track to understand project profitability.",
+    href: "/contractor-success-center/job-costing-basics",
+  },
+  {
+    type: "Checklist",
+    title: "What to send your bookkeeper",
+    text: "A monthly document checklist for cleaner reports and fewer last-minute questions.",
+    href: "/contractor-success-center/what-to-send-your-bookkeeper",
+  },
+  {
+    type: "Checklist",
+    title: "Payroll readiness checklist",
+    text: "A practical list for organizing payroll records, timecards, and worker information.",
+    href: "/contractor-success-center/payroll-readiness-checklist",
+  },
+  {
+    type: "Checklist",
+    title: "Clean books readiness checklist",
+    text: "Use this to see whether your books are ready for monthly support, cleanup, or CPA review.",
+    href: "/contractor-success-center/clean-books-readiness-checklist",
   },
 ];
 
@@ -93,10 +123,10 @@ export default function SuccessCenterPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Featured resources"
-            title="Start with these contractor business tools."
-            text="These first resources are designed to be practical, direct, and useful before a consultation ever begins."
+            title="Start with practical contractor business tools."
+            text="These resources are designed to help contractors learn, organize, and take the next step before a consultation ever begins."
           />
-          <div className="card-grid three">
+          <div className="card-grid three resource-directory">
             {featuredResources.map((resource) => (
               <Link className="info-card resource-link-card" href={resource.href} key={resource.title}>
                 <strong>{resource.type}</strong>
@@ -113,10 +143,11 @@ export default function SuccessCenterPage() {
         <div className="container split">
           <div>
             <p className="eyebrow dark">Featured resource</p>
-            <h2>Monthly Bookkeeping Checklist</h2>
+            <h2>Blueprint Brief</h2>
             <p>
-              A planned downloadable checklist to help contractors stay current,
-              organized, and prepared for monthly financial reporting.
+              A practical email for contractors with one business tip, one
+              bookkeeping reminder, one useful resource, and one Steel Beam
+              insight.
             </p>
           </div>
           <form className="inline-form" action="https://formspree.io/f/mqevryyw" method="POST">

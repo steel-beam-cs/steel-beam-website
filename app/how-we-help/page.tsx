@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
@@ -50,11 +51,12 @@ export default function HowWeHelpPage() {
           />
           <div className="card-grid three">
             {services.map((service) => (
-              <article className="info-card" key={service.title}>
+              <Link className="info-card resource-link-card" href={service.href} key={service.title}>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
                 <div className="mini-note">This may be right for you if you want more confidence in your numbers.</div>
-              </article>
+                <span>Learn more</span>
+              </Link>
             ))}
           </div>
         </div>
@@ -96,8 +98,32 @@ export default function HowWeHelpPage() {
         </div>
       </section>
 
+      <section className="section section-soft">
+        <div className="container split">
+          <div>
+            <p className="eyebrow dark">Cleanup bookkeeping</p>
+            <h2>Behind does not mean broken.</h2>
+            <p>
+              If your bookkeeping has fallen behind, Steel Beam can help review
+              the current file, organize missing records, reconcile accounts,
+              and create a cleaner foundation for monthly support.
+            </p>
+          </div>
+          <div className="panel">
+            <h3>Cleanup pricing starts at $250 per month reviewed.</h3>
+            <p>
+              Straightforward annual cleanup projects may be quoted at $2,500.
+              More complex files, missing records, sales tax issues, payroll
+              questions, or multiple entities may require a custom quote.
+            </p>
+            <Link className="button button-primary" href="/cleanup-bookkeeping">
+              Explore Cleanup Bookkeeping
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <CTASection />
     </PageShell>
   );
 }
-

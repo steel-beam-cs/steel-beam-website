@@ -21,26 +21,32 @@ export const services = [
   {
     title: "Bookkeeping & Financial Organization",
     text: "Monthly bookkeeping, reconciliations, clean records, and financial reports that help you understand where your business stands.",
+    href: "/how-we-help",
   },
   {
     title: "Payroll Support",
     text: "Standalone payroll support for contractors who need a reliable process for paying teams and organizing payroll records.",
+    href: "/how-we-help",
   },
   {
     title: "Job Costing & Reporting",
     text: "Contractor-specific tracking that shows which jobs are profitable, where costs are moving, and what needs attention.",
+    href: "/contractor-success-center/job-costing-basics",
   },
   {
     title: "Contractor Business Foundation",
     text: "Startup and systems consulting for contractors who want to build the right financial foundation from day one.",
+    href: "/how-we-help",
   },
   {
     title: "Catch-Up & Cleanup",
     text: "Behind on your books? We help organize past records, reconcile accounts, and get your financial systems back on track.",
+    href: "/cleanup-bookkeeping",
   },
   {
     title: "Advisory & Blueprint Reviews",
     text: "Practical business conversations that turn financial reports into clearer decisions about growth, cash flow, and risk.",
+    href: "/how-we-help",
   },
 ];
 
@@ -84,4 +90,3 @@ export const values = [
   "Excellence",
   "Partnership",
 ];
-

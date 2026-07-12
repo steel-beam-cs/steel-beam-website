@@ -16,12 +16,30 @@ export const metadata: Metadata = {
 };
 
 const visitorPaths = [
-  "I am starting my contracting business.",
-  "My bookkeeping is behind.",
-  "I need payroll help.",
-  "I need better job costing.",
-  "I am growing and need better systems.",
-  "I want a long-term financial partner.",
+  {
+    label: "I am starting my contracting business.",
+    href: "/how-we-help",
+  },
+  {
+    label: "My bookkeeping is behind.",
+    href: "/cleanup-bookkeeping",
+  },
+  {
+    label: "I need payroll help.",
+    href: "/how-we-help",
+  },
+  {
+    label: "I need better job costing.",
+    href: "/contractor-success-center/job-costing-basics",
+  },
+  {
+    label: "I am growing and need better systems.",
+    href: "/how-we-help",
+  },
+  {
+    label: "I want a long-term financial partner.",
+    href: "/contact",
+  },
 ];
 
 const proofPoints = [
@@ -77,8 +95,8 @@ export default function Home() {
           />
           <div className="path-grid">
             {visitorPaths.map((path) => (
-              <Link href="/contact" className="path-card" key={path}>
-                <span>{path}</span>
+              <Link href={path.href} className="path-card" key={path.label}>
+                <span>{path.label}</span>
                 <strong>Get guidance</strong>
               </Link>
             ))}
@@ -126,10 +144,11 @@ export default function Home() {
           />
           <div className="card-grid three">
             {services.slice(0, 6).map((service) => (
-              <article className="info-card" key={service.title}>
+              <Link className="info-card resource-link-card" href={service.href} key={service.title}>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
-              </article>
+                <span>Learn more</span>
+              </Link>
             ))}
           </div>
           <div className="center-actions">
@@ -190,6 +209,10 @@ export default function Home() {
             <Link href="/contractor-success-center/monthly-bookkeeping-checklist">
               <strong>Checklist</strong>
               <span>Monthly bookkeeping checklist</span>
+            </Link>
+            <Link href="/cleanup-bookkeeping">
+              <strong>Cleanup</strong>
+              <span>Behind on your books? Start here.</span>
             </Link>
           </div>
         </div>
