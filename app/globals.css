@@ -217,6 +217,18 @@ img {
   width: 100%;
 }
 
+.mobile-nav-actions .button-portal,
+.mobile-nav-actions .button-portal:hover {
+  background: var(--steel-navy);
+  color: white;
+}
+
+.mobile-nav-actions .button-primary,
+.mobile-nav-actions .button-primary:hover {
+  background: var(--construction-orange);
+  color: white;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
