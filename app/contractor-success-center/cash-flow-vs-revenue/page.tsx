@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function CashFlowVsRevenuePage() {
   return (
-    <PageShell>
+    <PageShell currentPath="/contractor-success-center/cash-flow-vs-revenue">
       <PageHero
         eyebrow="Contractor Success Center"
         title="Why cash flow matters more than revenue."

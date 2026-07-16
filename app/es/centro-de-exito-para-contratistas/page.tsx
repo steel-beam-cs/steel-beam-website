@@ -16,9 +16,48 @@ export const metadata: Metadata = {
 };
 
 const resources = [
-  ["Guia", "Costos por proyecto", "Entienda mano de obra, materiales, subcontratistas y margen."],
-  ["Lista", "Cierre mensual", "Organice documentos antes de cada cierre mensual."],
-  ["Planeacion", "Flujo de efectivo", "Preparese para nomina, materiales, retenciones y pagos lentos."],
+  [
+    "Guia",
+    "Costos por proyecto",
+    "Entienda mano de obra, materiales, subcontratistas y margen.",
+    "/es/centro-de-exito-para-contratistas/conceptos-basicos-de-costos-por-proyecto",
+  ],
+  [
+    "Calculadora",
+    "Markup vs margen",
+    "Estime precio de venta, ganancia bruta y margen antes de enviar la propuesta.",
+    "/es/centro-de-exito-para-contratistas/calculadora-markup-vs-margen",
+  ],
+  [
+    "Lista",
+    "Cierre mensual",
+    "Organice documentos antes de cada cierre mensual.",
+    "/es/centro-de-exito-para-contratistas/lista-mensual-de-contabilidad",
+  ],
+  [
+    "Planeacion",
+    "Flujo de efectivo",
+    "Preparese para nomina, materiales, retenciones y pagos lentos.",
+    "/es/centro-de-exito-para-contratistas/flujo-de-efectivo-vs-ingresos",
+  ],
+  [
+    "Lista",
+    "Que enviar a su contador",
+    "Sepa que documentos compartir cada mes.",
+    "/es/centro-de-exito-para-contratistas/que-enviar-a-su-contador",
+  ],
+  [
+    "Lista",
+    "Preparacion de nomina",
+    "Organice trabajadores, tiempo y reportes antes de correr nomina.",
+    "/es/centro-de-exito-para-contratistas/lista-de-nomina",
+  ],
+  [
+    "Lista",
+    "Libros limpios",
+    "Revise si sus registros estan listos para contabilidad, limpieza o CPA.",
+    "/es/centro-de-exito-para-contratistas/lista-para-libros-limpios",
+  ],
 ];
 
 export default function CentroDeExitoPage() {
@@ -34,12 +73,13 @@ export default function CentroDeExitoPage() {
       <section className="section">
         <div className="container">
           <div className="card-grid three">
-            {resources.map(([type, title, text]) => (
-              <article className="info-card resource-link-card" key={title}>
+            {resources.map(([type, title, text, href]) => (
+              <Link className="info-card resource-link-card" href={href} key={title}>
                 <strong>{type}</strong>
                 <h3>{title}</h3>
                 <p>{text}</p>
-              </article>
+                <span>Abrir recurso</span>
+              </Link>
             ))}
           </div>
         </div>

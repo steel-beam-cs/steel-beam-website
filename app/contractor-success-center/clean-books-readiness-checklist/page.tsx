@@ -28,7 +28,7 @@ const readinessItems = [
 
 export default function CleanBooksReadinessPage() {
   return (
-    <PageShell>
+    <PageShell currentPath="/contractor-success-center/clean-books-readiness-checklist">
       <PageHero
         eyebrow="Success Center"
         title="Clean books readiness checklist."

@@ -20,6 +20,14 @@ const routes = [
   "/answers",
   "/client-portal",
   "/contact",
+  "/es/gracias",
+  "/es/centro-de-exito-para-contratistas/flujo-de-efectivo-vs-ingresos",
+  "/es/centro-de-exito-para-contratistas/conceptos-basicos-de-costos-por-proyecto",
+  "/es/centro-de-exito-para-contratistas/calculadora-markup-vs-margen",
+  "/es/centro-de-exito-para-contratistas/lista-mensual-de-contabilidad",
+  "/es/centro-de-exito-para-contratistas/lista-de-nomina",
+  "/es/centro-de-exito-para-contratistas/que-enviar-a-su-contador",
+  "/es/centro-de-exito-para-contratistas/lista-para-libros-limpios",
   ...Object.values(routeMap.es),
 ];
 

@@ -26,7 +26,7 @@ const payrollItems = [
 
 export default function PayrollReadinessChecklistPage() {
   return (
-    <PageShell>
+    <PageShell currentPath="/contractor-success-center/payroll-readiness-checklist">
       <PageHero
         eyebrow="Success Center"
         title="Contractor payroll readiness checklist."

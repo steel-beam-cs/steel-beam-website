@@ -61,13 +61,73 @@ export const navItemsEs = [
 ];
 
 export const alternateRoutes = new Map<string, string>(
-  Object.keys(routeMap.en).flatMap((key) => {
-    const routeKey = key as keyof typeof routeMap.en;
-    return [
-      [routeMap.en[routeKey], routeMap.es[routeKey]],
-      [routeMap.es[routeKey], routeMap.en[routeKey]],
-    ];
-  }),
+  [
+    ...Object.keys(routeMap.en).flatMap((key) => {
+      const routeKey = key as keyof typeof routeMap.en;
+      return [
+        [routeMap.en[routeKey], routeMap.es[routeKey]],
+        [routeMap.es[routeKey], routeMap.en[routeKey]],
+      ] satisfies [string, string][];
+    }),
+    ["/thank-you", "/es/gracias"],
+    ["/es/gracias", "/thank-you"],
+    [
+      "/contractor-success-center/cash-flow-vs-revenue",
+      "/es/centro-de-exito-para-contratistas/flujo-de-efectivo-vs-ingresos",
+    ],
+    [
+      "/es/centro-de-exito-para-contratistas/flujo-de-efectivo-vs-ingresos",
+      "/contractor-success-center/cash-flow-vs-revenue",
+    ],
+    [
+      "/contractor-success-center/job-costing-basics",
+      "/es/centro-de-exito-para-contratistas/conceptos-basicos-de-costos-por-proyecto",
+    ],
+    [
+      "/es/centro-de-exito-para-contratistas/conceptos-basicos-de-costos-por-proyecto",
+      "/contractor-success-center/job-costing-basics",
+    ],
+    [
+      "/contractor-success-center/markup-vs-margin-calculator",
+      "/es/centro-de-exito-para-contratistas/calculadora-markup-vs-margen",
+    ],
+    [
+      "/es/centro-de-exito-para-contratistas/calculadora-markup-vs-margen",
+      "/contractor-success-center/markup-vs-margin-calculator",
+    ],
+    [
+      "/contractor-success-center/monthly-bookkeeping-checklist",
+      "/es/centro-de-exito-para-contratistas/lista-mensual-de-contabilidad",
+    ],
+    [
+      "/es/centro-de-exito-para-contratistas/lista-mensual-de-contabilidad",
+      "/contractor-success-center/monthly-bookkeeping-checklist",
+    ],
+    [
+      "/contractor-success-center/payroll-readiness-checklist",
+      "/es/centro-de-exito-para-contratistas/lista-de-nomina",
+    ],
+    [
+      "/es/centro-de-exito-para-contratistas/lista-de-nomina",
+      "/contractor-success-center/payroll-readiness-checklist",
+    ],
+    [
+      "/contractor-success-center/what-to-send-your-bookkeeper",
+      "/es/centro-de-exito-para-contratistas/que-enviar-a-su-contador",
+    ],
+    [
+      "/es/centro-de-exito-para-contratistas/que-enviar-a-su-contador",
+      "/contractor-success-center/what-to-send-your-bookkeeper",
+    ],
+    [
+      "/contractor-success-center/clean-books-readiness-checklist",
+      "/es/centro-de-exito-para-contratistas/lista-para-libros-limpios",
+    ],
+    [
+      "/es/centro-de-exito-para-contratistas/lista-para-libros-limpios",
+      "/contractor-success-center/clean-books-readiness-checklist",
+    ],
+  ] satisfies [string, string][],
 );
 
 export const services = [

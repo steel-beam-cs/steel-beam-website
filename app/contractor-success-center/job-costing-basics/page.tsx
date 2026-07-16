@@ -24,7 +24,7 @@ const costBuckets = [
 
 export default function JobCostingBasicsPage() {
   return (
-    <PageShell>
+    <PageShell currentPath="/contractor-success-center/job-costing-basics">
       <PageHero
         eyebrow="Success Center"
         title="Job costing basics for contractors."

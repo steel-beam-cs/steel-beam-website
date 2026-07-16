@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function MarkupVsMarginCalculatorPage() {
   return (
-    <PageShell>
+    <PageShell currentPath="/contractor-success-center/markup-vs-margin-calculator">
       <PageHero
         eyebrow="Contractor Calculator"
         title="Markup and margin are not the same thing."

@@ -30,7 +30,7 @@ const checklist = [
 
 export default function MonthlyBookkeepingChecklistPage() {
   return (
-    <PageShell>
+    <PageShell currentPath="/contractor-success-center/monthly-bookkeeping-checklist">
       <PageHero
         eyebrow="Contractor Checklist"
         title="Monthly bookkeeping checklist for contractors."
