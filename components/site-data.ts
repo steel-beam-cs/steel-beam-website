@@ -7,6 +7,39 @@ export const contact = {
   shareFileUrl: "https://steelbeam.sharefile.com",
 };
 
+export type Locale = "en" | "es";
+
+export const company = {
+  name: "Steel Beam Contractor Solutions LLC",
+  slogan: "Solid Solutions, Reinforcing Your Business.",
+  siteUrl: "https://steel-beam.org",
+};
+
+export const routeMap = {
+  en: {
+    home: "/",
+    about: "/about",
+    howWeHelp: "/how-we-help",
+    cleanup: "/cleanup-bookkeeping",
+    success: "/contractor-success-center",
+    journey: "/client-journey",
+    answers: "/answers",
+    portal: "/client-portal",
+    contact: "/contact",
+  },
+  es: {
+    home: "/es",
+    about: "/es/sobre-nosotros",
+    howWeHelp: "/es/como-ayudamos",
+    cleanup: "/es/limpieza-de-contabilidad",
+    success: "/es/centro-de-exito-para-contratistas",
+    journey: "/es/proceso-del-cliente",
+    answers: "/es/preguntas-frecuentes",
+    portal: "/es/portal-del-cliente",
+    contact: "/es/contacto",
+  },
+} as const;
+
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -16,6 +49,26 @@ export const navItems = [
   { label: "FAQs", href: "/answers" },
   { label: "Contact", href: "/contact" },
 ];
+
+export const navItemsEs = [
+  { label: "Inicio", href: routeMap.es.home },
+  { label: "Nosotros", href: routeMap.es.about },
+  { label: "Como Ayudamos", href: routeMap.es.howWeHelp },
+  { label: "Centro de Exito", href: routeMap.es.success },
+  { label: "Proceso", href: routeMap.es.journey },
+  { label: "Preguntas", href: routeMap.es.answers },
+  { label: "Contacto", href: routeMap.es.contact },
+];
+
+export const alternateRoutes = new Map<string, string>(
+  Object.keys(routeMap.en).flatMap((key) => {
+    const routeKey = key as keyof typeof routeMap.en;
+    return [
+      [routeMap.en[routeKey], routeMap.es[routeKey]],
+      [routeMap.es[routeKey], routeMap.en[routeKey]],
+    ];
+  }),
+);
 
 export const services = [
   {
@@ -47,6 +100,39 @@ export const services = [
     title: "Advisory & Blueprint Reviews",
     text: "Practical business conversations that turn financial reports into clearer decisions about growth, cash flow, and risk.",
     href: "/how-we-help",
+  },
+];
+
+export const servicesEs = [
+  {
+    title: "Contabilidad y Organizacion Financiera",
+    text: "Contabilidad mensual, conciliaciones, registros limpios y reportes financieros para entender donde esta su negocio.",
+    href: routeMap.es.howWeHelp,
+  },
+  {
+    title: "Apoyo de Nomina",
+    text: "Apoyo de nomina independiente para contratistas que necesitan un proceso confiable para pagar equipos y organizar registros.",
+    href: routeMap.es.howWeHelp,
+  },
+  {
+    title: "Costos por Proyecto y Reportes",
+    text: "Seguimiento especifico para contratistas que muestra que proyectos son rentables, donde se mueven los costos y que necesita atencion.",
+    href: routeMap.es.success,
+  },
+  {
+    title: "Base del Negocio Contratista",
+    text: "Consultoria de inicio y sistemas para contratistas que quieren construir la base financiera correcta desde el primer dia.",
+    href: routeMap.es.howWeHelp,
+  },
+  {
+    title: "Puesta al Dia y Limpieza",
+    text: "Si sus libros estan atrasados, ayudamos a organizar registros, conciliar cuentas y recuperar sus sistemas financieros.",
+    href: routeMap.es.cleanup,
+  },
+  {
+    title: "Asesoria y Revisiones Blueprint",
+    text: "Conversaciones practicas que convierten reportes financieros en decisiones mas claras sobre crecimiento, efectivo y riesgo.",
+    href: routeMap.es.howWeHelp,
   },
 ];
 
@@ -83,6 +169,39 @@ export const journey = [
   },
 ];
 
+export const journeyEs = [
+  {
+    title: "Descubrimiento",
+    subtitle: "Entender su negocio",
+    text: "Aprendemos sus metas, retos, sistemas actuales y como debe verse el exito.",
+  },
+  {
+    title: "Base",
+    subtitle: "Construir la base financiera",
+    text: "Confirmamos el plan de servicio, organizamos registros y establecemos intercambio seguro de documentos.",
+  },
+  {
+    title: "Estructura",
+    subtitle: "Crear sistemas confiables",
+    text: "Revisamos cuentas, flujos de trabajo, costos por proyecto, nomina y prioridades de limpieza.",
+  },
+  {
+    title: "Refuerzo",
+    subtitle: "Apoyo mensual",
+    text: "Entregamos contabilidad recurrente, reportes, apoyo de nomina y visibilidad enfocada en contratistas.",
+  },
+  {
+    title: "Revision Blueprint",
+    subtitle: "Convertir reportes en decisiones",
+    text: "Hablamos de efectivo, rentabilidad, proyectos, tendencias, metas y siguientes pasos.",
+  },
+  {
+    title: "Relacion Continua",
+    subtitle: "Crecer juntos",
+    text: "Nos adaptamos mientras crece su negocio y ayudamos a mejorar sistemas con confianza.",
+  },
+];
+
 export const values = [
   "Integrity",
   "Respect",
@@ -90,3 +209,23 @@ export const values = [
   "Excellence",
   "Partnership",
 ];
+
+export const spanishSupportNote =
+  "Steel Beam apoya a contratistas que hablan espanol con paginas traducidas, documentos en espanol y asistencia de idioma cuando este disponible. No se anuncia como una oficina completamente bilingue.";
+
+export const downloads = {
+  en: [
+    ["Contractor Intake Form", "/resources/en/contractor-intake-form.md"],
+    ["Engagement Letter Overview", "/resources/en/engagement-letter-overview.md"],
+    ["Client Onboarding Guide", "/resources/en/client-onboarding-guide.md"],
+    ["Client Playbook", "/resources/en/client-playbook.md"],
+    ["FAQ", "/resources/en/faq.md"],
+  ],
+  es: [
+    ["Formulario de Inicio para Contratistas", "/resources/es/formulario-de-inicio-para-contratistas.md"],
+    ["Resumen de Carta de Compromiso", "/resources/es/resumen-de-carta-de-compromiso.md"],
+    ["Guia de Incorporacion del Cliente", "/resources/es/guia-de-incorporacion-del-cliente.md"],
+    ["Manual del Cliente", "/resources/es/manual-del-cliente.md"],
+    ["Preguntas Frecuentes", "/resources/es/preguntas-frecuentes.md"],
+  ],
+} as const;

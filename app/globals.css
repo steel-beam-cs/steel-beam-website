@@ -62,6 +62,15 @@ a {
   color: inherit;
 }
 
+.language-link {
+  color: var(--charcoal-black);
+  font-size: 0.9rem;
+  font-weight: 850;
+  text-decoration: underline;
+  text-decoration-color: var(--construction-orange);
+  text-underline-offset: 4px;
+}
+
 img {
   max-width: 100%;
 }

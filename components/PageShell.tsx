@@ -1,13 +1,22 @@
 import { ReactNode } from "react";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
+import type { Locale } from "./site-data";
 
-export function PageShell({ children }: { children: ReactNode }) {
+export function PageShell({
+  children,
+  locale = "en",
+  currentPath = "/",
+}: {
+  children: ReactNode;
+  locale?: Locale;
+  currentPath?: string;
+}) {
   return (
     <>
-      <SiteHeader />
-      <main>{children}</main>
-      <SiteFooter />
+      <SiteHeader locale={locale} currentPath={currentPath} />
+      <main lang={locale}>{children}</main>
+      <SiteFooter locale={locale} currentPath={currentPath} />
     </>
   );
 }

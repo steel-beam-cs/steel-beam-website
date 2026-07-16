@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { routeMap } from "@/components/site-data";
 
 const baseUrl = "https://steel-beam.org";
 
@@ -19,6 +20,7 @@ const routes = [
   "/answers",
   "/client-portal",
   "/contact",
+  ...Object.values(routeMap.es),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
