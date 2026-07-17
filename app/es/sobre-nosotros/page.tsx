@@ -45,9 +45,48 @@ export default function SobreNosotrosPage() {
               reportes y apoyo administrativo necesarios para construir negocios
               excelentes.
             </p>
+            <p>
+              La experiencia real en finanzas de construccion sigue siendo la
+              base. Adam tambien cuenta con certificacion de Intuit Bookkeeping
+              y continua su educacion profesional por medio de Intuit Academy
+              mientras trabaja para obtener la certificacion QuickBooks
+              ProAdvisor.
+            </p>
             <p className="quote">
               El objetivo es construir relaciones, no vender promesas exageradas.
             </p>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container credential-section">
+          <div>
+            <p className="eyebrow dark">Credenciales profesionales</p>
+            <h2>Experiencia en construccion + conocimiento certificado en contabilidad.</h2>
+            <p>
+              Steel Beam combina liderazgo financiero vivido dentro de una
+              empresa de construccion con capacitacion profesional de
+              contabilidad por medio de Intuit.
+            </p>
+            <ul className="credential-list">
+              <li>Certificacion de Intuit Bookkeeping</li>
+              <li>Educacion profesional continua por medio de Intuit Academy</li>
+              <li>Trabajando hacia la certificacion QuickBooks ProAdvisor</li>
+            </ul>
+            <p className="credential-disclaimer">
+              Intuit y QuickBooks son marcas comerciales de Intuit Inc. Se
+              mencionan solo para identificar capacitacion y educacion obtenida;
+              no se implica respaldo ni asociacion.
+            </p>
+          </div>
+          <div className="credential-badge" aria-label="Insignia de certificacion Intuit Bookkeeping">
+            <Image
+              src="/images/intuit-bookkeeping-certification.png"
+              alt="Insignia de certificacion Intuit Bookkeeping"
+              width={320}
+              height={320}
+              sizes="160px"
+            />
           </div>
         </div>
       </section>

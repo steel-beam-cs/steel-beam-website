@@ -136,6 +136,41 @@ export default function Home() {
       </section>
 
       <section className="section">
+        <div className="container credential-section">
+          <div>
+            <p className="eyebrow dark">Professional Credentials</p>
+            <h2>Construction Experience + Certified Bookkeeping Expertise.</h2>
+            <p>
+              Steel Beam combines real-world construction financial leadership
+              with professional bookkeeping training through Intuit. The
+              credential supports the experience behind the work: job costing,
+              payroll, cash flow, reporting, and contractor-focused financial
+              systems.
+            </p>
+            <ul className="credential-list">
+              <li>Intuit Bookkeeping Certified</li>
+              <li>Continuing professional education through Intuit Academy</li>
+              <li>Working toward QuickBooks ProAdvisor certification</li>
+            </ul>
+            <p className="credential-disclaimer">
+              Intuit and QuickBooks are trademarks of Intuit Inc. Used here only
+              to identify earned training and education; no endorsement or
+              partnership is implied.
+            </p>
+          </div>
+          <div className="credential-badge" aria-label="Intuit Bookkeeping Certified badge">
+            <Image
+              src="/images/intuit-bookkeeping-certification.png"
+              alt="Intuit Bookkeeping certification badge"
+              width={320}
+              height={320}
+              sizes="160px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <SectionHeading
             eyebrow="How we help"
