@@ -499,6 +499,45 @@ img {
   color: white;
 }
 
+.why-exists-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.why-exists-section::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -4%;
+  width: min(500px, 46vw);
+  height: min(500px, 46vw);
+  transform: translateY(-50%);
+  background: url("/images/steel-beam-logo.png") center / contain no-repeat;
+  opacity: 0.055;
+  pointer-events: none;
+}
+
+.why-exists-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 42rem;
+}
+
+.why-exists-heading {
+  margin-bottom: 36px;
+}
+
+.why-exists-body p {
+  color: #3b4452;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-width: 36rem;
+}
+
+.why-exists-body p + p {
+  margin-top: 1.25rem;
+}
+
 .page-hero {
   position: relative;
   overflow: hidden;
@@ -1689,6 +1728,13 @@ fieldset {
     justify-self: start;
     width: 150px;
   }
+
+  .why-exists-section::after {
+    right: -22%;
+    width: min(360px, 62vw);
+    height: min(360px, 62vw);
+    opacity: 0.045;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1736,6 +1782,17 @@ fieldset {
 
   .button-large {
     width: 100%;
+  }
+
+  .why-exists-section::after {
+    right: -34%;
+    width: min(280px, 70vw);
+    height: min(280px, 70vw);
+    opacity: 0.035;
+  }
+
+  .why-exists-copy {
+    max-width: none;
   }
 
   .trust-row,

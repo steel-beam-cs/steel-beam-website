@@ -93,21 +93,31 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container narrow">
-          <h2>Why Steel Beam exists</h2>
-          <p>
-            Many contractors are exceptional builders but were never taught how
-            to build the financial side of their business. Steel Beam exists to
-            help close that gap through honest guidance, dependable financial
-            systems, and long-term partnerships founded on integrity, respect,
-            and trust.
-          </p>
-          <p>
-            The company was created to be the kind of financial partner Adam
-            wishes every contractor had: practical, organized, fair, and
-            genuinely invested in the client&apos;s success.
-          </p>
+      <section
+        className="section why-exists-section"
+        aria-labelledby="why-exists-heading"
+      >
+        <div className="container">
+          <div className="why-exists-copy">
+            <div className="section-heading why-exists-heading">
+              <p className="eyebrow dark">Why Steel Beam exists</p>
+              <h2 id="why-exists-heading">Why Steel Beam exists</h2>
+            </div>
+            <div className="why-exists-body">
+              <p>
+                Many contractors are exceptional builders but were never taught how
+                to build the financial side of their business. Steel Beam exists to
+                help close that gap through honest guidance, dependable financial
+                systems, and long-term partnerships founded on integrity, respect,
+                and trust.
+              </p>
+              <p>
+                The company was created to be the kind of financial partner Adam
+                wishes every contractor had: practical, organized, fair, and
+                genuinely invested in the client&apos;s success.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
