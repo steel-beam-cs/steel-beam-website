@@ -47,10 +47,10 @@ export default function SobreNosotrosPage() {
             </p>
             <p>
               La experiencia real en finanzas de construccion sigue siendo la
-              base. Adam tambien cuenta con certificacion de Intuit Bookkeeping
-              y continua su educacion profesional por medio de Intuit Academy
-              mientras trabaja para obtener la certificacion QuickBooks
-              ProAdvisor.
+              base. Adam cuenta con la certificacion de Intuit Bookkeeping, es
+              QuickBooks Online ProAdvisor Nivel 1 y se graduo de Client Advisory
+              Services Foundations. Continua su educacion profesional por medio
+              de la ProAdvisor Academy de Intuit.
             </p>
             <p className="quote">
               El objetivo es construir relaciones, no vender promesas exageradas.
@@ -58,35 +58,71 @@ export default function SobreNosotrosPage() {
           </div>
         </div>
       </section>
-      <section className="section">
-        <div className="container credential-section">
-          <div>
-            <p className="eyebrow dark">Credenciales profesionales</p>
-            <h2>Experiencia en construccion + conocimiento certificado en contabilidad.</h2>
-            <p>
-              Steel Beam combina liderazgo financiero vivido dentro de una
-              empresa de construccion con capacitacion profesional de
-              contabilidad por medio de Intuit.
-            </p>
-            <ul className="credential-list">
-              <li>Certificacion de Intuit Bookkeeping</li>
-              <li>Educacion profesional continua por medio de Intuit Academy</li>
-              <li>Trabajando hacia la certificacion QuickBooks ProAdvisor</li>
-            </ul>
+      <section
+        className="section section-soft"
+        aria-labelledby="credenciales-heading"
+      >
+        <div className="container">
+          <div className="credentials-block">
+            <div className="credentials-intro">
+              <p className="eyebrow dark">Credenciales profesionales</p>
+              <h2 id="credenciales-heading">
+                Experiencia certificada en QuickBooks. Apoyo asesor practico.
+              </h2>
+              <p className="credentials-lede">
+                Steel Beam combina conocimiento certificado de QuickBooks con
+                orientacion financiera practica para contratistas.
+              </p>
+            </div>
+
+            <div className="credentials-grid">
+              <article className="credential-item">
+                <div className="credential-badge">
+                  <Image
+                    src="/images/intuit-quickbooks-level-1-certified.png"
+                    alt="Insignia Intuit ProAdvisor QuickBooks Nivel 1 certificado"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="credential-label">
+                  QuickBooks Online ProAdvisor Level 1
+                </p>
+              </article>
+
+              <article className="credential-item">
+                <div className="credential-badge">
+                  <Image
+                    src="/images/intuit-cas-foundations-graduate.png"
+                    alt="Insignia Intuit ProAdvisor Client Advisory Services Foundations Graduate"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="credential-label">
+                  Client Advisory Services Foundations Graduate
+                </p>
+              </article>
+
+              <article className="credential-item credential-item-secondary">
+                <div className="credential-badge credential-badge-secondary">
+                  <Image
+                    src="/images/intuit-proadvisor-silver.png"
+                    alt="Insignia Intuit ProAdvisor Silver firm-tier"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="credential-label">
+                  Intuit ProAdvisor — Silver Firm Tier
+                </p>
+              </article>
+            </div>
             <p className="credential-disclaimer">
               Intuit y QuickBooks son marcas comerciales de Intuit Inc. Se
               mencionan solo para identificar capacitacion y educacion obtenida;
               no se implica respaldo ni asociacion.
             </p>
-          </div>
-          <div className="credential-badge" aria-label="Insignia de certificacion Intuit Bookkeeping">
-            <Image
-              src="/images/intuit-bookkeeping-certification.png"
-              alt="Insignia de certificacion Intuit Bookkeeping"
-              width={320}
-              height={320}
-              sizes="160px"
-            />
           </div>
         </div>
       </section>
