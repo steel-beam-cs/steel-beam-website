@@ -270,6 +270,187 @@ export const values = [
   "Partnership",
 ];
 
+export const valuesEs = [
+  "Integridad",
+  "Respeto",
+  "Mayordomia",
+  "Excelencia",
+  "Relacion",
+];
+
+export const milestonesEs = [
+  "Servicio en el Ejercito de los Estados Unidos",
+  "Estudios de matematicas",
+  "Construccion de torres y gestion de proyectos",
+  "Supervision de construccion y revision de pagos a contratistas",
+  "Socio y CFO de una empresa de construccion de mas de $10M anuales",
+  "Fundador de Steel Beam Contractor Solutions LLC",
+];
+
+export const proofPointsEs = [
+  "Enfocado en contratistas",
+  "Portal seguro del cliente",
+  "Precios mensuales fijos",
+  "Creado por un ex contratista",
+];
+
+export const packagesEs = [
+  {
+    title: "Foundation",
+    price: "Desde $350/mes",
+    text: "Contabilidad mensual, conciliaciones, estados financieros, revision mensual y apoyo por email.",
+  },
+  {
+    title: "Structural",
+    price: "Desde $650/mes",
+    text: "Foundation mas cuentas por pagar, cuentas por cobrar, seguimiento de impuesto sobre ventas, reuniones mensuales y apoyo prioritario.",
+  },
+  {
+    title: "Steel Advantage",
+    price: "Desde $995/mes",
+    text: "Structural mas costos por proyecto, reportes de rentabilidad, pronostico de flujo de efectivo, asistencia de presupuesto y apoyo para CPA al cierre del ano.",
+  },
+];
+
+export const cleanupIncludesEs = [
+  "Revisar el archivo contable actual e identificar areas problematicas.",
+  "Organizar registros bancarios, tarjetas, prestamos, nomina, proveedores y clientes.",
+  "Categorizar ingresos y gastos con un plan de cuentas adecuado para contratistas.",
+  "Conciliar cuentas bancarias y de tarjeta durante el periodo de limpieza.",
+  "Marcar documentos faltantes, transacciones poco claras, duplicados y posibles errores.",
+  "Preparar reportes financieros mas limpios para sus registros, CPA, prestamista o siguiente etapa de servicio.",
+];
+
+export const whenItFitsEs = [
+  "Esta varios meses atrasado.",
+  "Sus libros se iniciaron pero nunca se mantuvieron por completo.",
+  "Las cuentas bancarias estan conectadas pero las transacciones no se revisaron.",
+  "Su CPA pidio registros mas limpios antes de trabajar impuestos.",
+  "No esta seguro de si sus reportes son exactos.",
+  "Quiere pasar a contabilidad mensual con un punto de partida limpio.",
+];
+
+export const cleanupProcessEs = [
+  {
+    title: "Revision de Libros",
+    text: "Revisamos el archivo actual, cuentas, estados, volumen de transacciones y registros disponibles.",
+  },
+  {
+    title: "Plan de Limpieza",
+    text: "Recibe un alcance claro, cronograma y cotizacion segun cuantos meses deben reconstruirse.",
+  },
+  {
+    title: "Recoleccion de Documentos",
+    text: "Reunimos estados, recibos, facturas, registros de nomina, documentos de prestamos y preguntas abiertas.",
+  },
+  {
+    title: "Reconstruccion y Conciliacion",
+    text: "Las transacciones se categorizan, las cuentas se concilian y los problemas se documentan mientras avanzamos.",
+  },
+  {
+    title: "Revision y Siguientes Pasos",
+    text: "Recibe reportes limpios, notas y una recomendacion para mantenerse al dia.",
+  },
+];
+
+export const successCentersEs = [
+  {
+    title: "Centro de Conocimiento Steel Beam",
+    text: "Articulos practicos sobre gestion financiera, costos por proyecto, flujo de efectivo, nomina, crecimiento y contabilidad de construccion.",
+  },
+  {
+    title: "Biblioteca Blueprint Steel Beam",
+    text: "Listas, hojas de trabajo, guias de inicio y herramientas de revision mensual para contratistas.",
+  },
+  {
+    title: "Calculadoras para Contratistas",
+    text: "Herramientas planeadas para margen de ganancia, punto de equilibrio, carga laboral, markup vs margen y planeacion de efectivo.",
+  },
+  {
+    title: "Centro de Planeacion",
+    text: "Calendarios fiscales, recordatorios de nomina, listas de fin de ano y recursos de planeacion trimestral.",
+  },
+  {
+    title: "Blueprint Brief",
+    text: "Un email mensual practico con un consejo de negocio, un recordatorio financiero, un recurso y un Steel Beam Insight.",
+  },
+  {
+    title: "Historias de Exito de Contratistas",
+    text: "Proximamente: historias de clientes que muestran como sistemas financieros organizados crearon claridad y confianza.",
+  },
+];
+
+export const featuredResourcesEs = [
+  {
+    type: "Limpieza",
+    title: "Libros atrasados? Empiece aqui.",
+    text: "Un camino practico de limpieza contable para contratistas que necesitan reconstruir sus registros.",
+    href: routeMap.es.cleanup,
+  },
+  {
+    type: "Articulo",
+    title: "Por que el flujo de efectivo importa mas que los ingresos",
+    text: "Una explicacion practica de por que los contratistas pueden verse rentables en papel y aun asi sentir presion de efectivo.",
+    href: "/es/centro-de-exito-para-contratistas/flujo-de-efectivo-vs-ingresos",
+  },
+  {
+    type: "Calculadora",
+    title: "Calculadora de markup vs margen",
+    text: "Estime precio de venta, ganancia bruta y margen antes de enviar la siguiente propuesta.",
+    href: "/es/centro-de-exito-para-contratistas/calculadora-markup-vs-margen",
+  },
+  {
+    type: "Lista",
+    title: "Lista mensual de contabilidad",
+    text: "Una lista simple de fin de mes para mantener libros organizados y listos para revision.",
+    href: "/es/centro-de-exito-para-contratistas/lista-mensual-de-contabilidad",
+  },
+  {
+    type: "Guia",
+    title: "Conceptos basicos de costos por proyecto",
+    text: "Aprenda las categorias de costo que los contratistas deben seguir para entender rentabilidad por proyecto.",
+    href: "/es/centro-de-exito-para-contratistas/conceptos-basicos-de-costos-por-proyecto",
+  },
+  {
+    type: "Lista",
+    title: "Que enviar a su contador",
+    text: "Una lista mensual de documentos para reportes mas limpios y menos preguntas de ultimo minuto.",
+    href: "/es/centro-de-exito-para-contratistas/que-enviar-a-su-contador",
+  },
+  {
+    type: "Lista",
+    title: "Lista de preparacion de nomina",
+    text: "Una lista practica para organizar registros de nomina, tarjetas de tiempo e informacion de trabajadores.",
+    href: "/es/centro-de-exito-para-contratistas/lista-de-nomina",
+  },
+  {
+    type: "Lista",
+    title: "Lista para libros limpios",
+    text: "Use esto para ver si sus libros estan listos para apoyo mensual, limpieza o revision de CPA.",
+    href: "/es/centro-de-exito-para-contratistas/lista-para-libros-limpios",
+  },
+];
+
+export const portalUploadsEs = [
+  "Estados bancarios",
+  "Estados de tarjetas de credito",
+  "Reportes de nomina",
+  "Avisos fiscales",
+  "Facturas de proveedores",
+  "Facturas a clientes",
+  "Recibos",
+  "Registros de compra de equipo",
+];
+
+export const journeyScenariosEs = [
+  "Empezar un negocio",
+  "Libros atrasados",
+  "Crecer mas rapido que sus sistemas",
+  "Necesitar ayuda con nomina",
+  "No saber que proyectos son rentables",
+  "Querer libros organizados y tranquilidad",
+];
+
 export const spanishSupportNote =
   "Steel Beam apoya a contratistas que hablan espanol con paginas traducidas, documentos en espanol y asistencia de idioma cuando este disponible. No se anuncia como una oficina completamente bilingue.";
 

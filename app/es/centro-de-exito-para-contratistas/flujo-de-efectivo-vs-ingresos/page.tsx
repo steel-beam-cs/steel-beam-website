@@ -49,6 +49,14 @@ export default function FlujoDeEfectivoPage() {
             <li>Retenciones, pagos lentos o desembolsos atrasados.</li>
             <li>Equipo, combustible, seguros e impuestos llegando al mismo tiempo.</li>
           </ul>
+
+          <h2>Como se ve una mejor visibilidad de flujo de efectivo</h2>
+          <p>
+            Mejor flujo de efectivo empieza con libros actuales, costos por
+            proyecto limpios, cuentas por cobrar claras y un ritmo simple para
+            revisar lo que vence, lo que se debe y lo que viene despues.
+          </p>
+
           <div className="callout-box">
             <strong>Steel Beam Insight</strong>
             <p>
@@ -57,6 +65,19 @@ export default function FlujoDeEfectivoPage() {
               cuales lo consumen y cuando viene la siguiente presion.
             </p>
           </div>
+
+          <h2>Tres preguntas para este mes</h2>
+          <ol className="number-list">
+            <li>Que facturas estan vencidas?</li>
+            <li>Que proyectos tienen costos que suben mas rapido de lo esperado?</li>
+            <li>Que pagos, nomina, impuestos o renovaciones vencen pronto?</li>
+          </ol>
+
+          <p>
+            Si esas respuestas son dificiles de encontrar, el siguiente paso no es
+            panico. El siguiente paso es construir un mejor proceso financiero.
+          </p>
+
           <p>
             <Link className="button button-primary button-large" href="/es/contacto">
               Hablar sobre flujo de efectivo

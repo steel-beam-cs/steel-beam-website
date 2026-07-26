@@ -59,6 +59,23 @@ export default function CostosPorProyectoPage() {
               tiempo y margen.
             </p>
           </div>
+
+          <h2>Por que importa</h2>
+          <p>
+            Sin costos por proyecto, un contratista puede conocer ventas totales y
+            gastos totales, pero aun no saber que proyectos funcionaron bien. Eso
+            puede llevar a cotizar bajo, perder ordenes de cambio, presion de
+            nomina y proyectos que parecen ocupados pero no generan suficiente
+            ganancia.
+          </p>
+
+          <h2>Por donde empezar</h2>
+          <p>
+            Empiece simple: asigne ingresos y costos directos a cada proyecto de
+            forma consistente. Luego revise rentabilidad por proyecto cada mes en
+            lugar de esperar al cierre del ano.
+          </p>
+
           <p>
             <Link className="text-link" href="/es/contacto">
               Preguntar sobre apoyo de costos por proyecto

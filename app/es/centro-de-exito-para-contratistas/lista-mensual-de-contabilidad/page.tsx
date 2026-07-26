@@ -49,7 +49,14 @@ export default function ListaMensualPage() {
             <h2>Use esta lista antes del cierre mensual.</h2>
             <p>
               Los libros de contratistas se desordenan cuando documentos, costos,
-              facturas y pagos se revisan solo en temporada de impuestos.
+              facturas y pagos se revisan solo en temporada de impuestos. Un
+              proceso mensual simple crea reportes mas limpios y mejores
+              decisiones.
+            </p>
+            <p>
+              Use esta pagina como lista de trabajo por ahora. Una version
+              descargable puede agregarse mas adelante mientras crece la
+              Biblioteca Blueprint de Steel Beam.
             </p>
             <Link className="button button-primary" href="/es/contacto">
               Recibir ayuda con sus libros
@@ -65,6 +72,19 @@ export default function ListaMensualPage() {
           </div>
         </div>
       </section>
+
+      <section className="section section-soft">
+        <div className="container narrow center-copy">
+          <h2>Libros mas limpios crean mejores conversaciones.</h2>
+          <p>
+            Cuando los registros se organizan cada mes, las revisiones financieras
+            se vuelven mas utiles. Puede hablar de margenes, flujo de efectivo,
+            desempeno por proyecto y siguientes pasos en lugar de buscar papeles
+            faltantes.
+          </p>
+        </div>
+      </section>
+
       <CTASection />
     </PageShell>
   );

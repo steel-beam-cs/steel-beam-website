@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
-import { journeyEs, routeMap, servicesEs } from "@/components/site-data";
+import {
+  journeyEs,
+  proofPointsEs,
+  routeMap,
+  servicesEs,
+} from "@/components/site-data";
 
 export const metadata: Metadata = {
   title: "Contabilidad y Apoyo Financiero para Contratistas",
@@ -16,12 +22,30 @@ export const metadata: Metadata = {
 };
 
 const visitorPaths = [
-  ["Estoy empezando mi negocio contratista.", routeMap.es.howWeHelp],
-  ["Mi contabilidad esta atrasada.", routeMap.es.cleanup],
-  ["Necesito ayuda con nomina.", routeMap.es.howWeHelp],
-  ["Necesito mejores costos por proyecto.", routeMap.es.success],
-  ["Estoy creciendo y necesito mejores sistemas.", routeMap.es.howWeHelp],
-  ["Quiero un socio financiero de largo plazo.", routeMap.es.contact],
+  {
+    label: "Estoy empezando mi negocio contratista.",
+    href: routeMap.es.howWeHelp,
+  },
+  {
+    label: "Mi contabilidad esta atrasada.",
+    href: routeMap.es.cleanup,
+  },
+  {
+    label: "Necesito ayuda con nomina.",
+    href: routeMap.es.howWeHelp,
+  },
+  {
+    label: "Necesito mejores costos por proyecto.",
+    href: "/es/centro-de-exito-para-contratistas/conceptos-basicos-de-costos-por-proyecto",
+  },
+  {
+    label: "Estoy creciendo y necesito mejores sistemas.",
+    href: routeMap.es.howWeHelp,
+  },
+  {
+    label: "Quiero un socio financiero de largo plazo.",
+    href: routeMap.es.contact,
+  },
 ];
 
 export default function SpanishHomePage() {
@@ -36,8 +60,8 @@ export default function SpanishHomePage() {
             <span>a Construir Negocios Mas Fuertes.</span>
           </h1>
           <p className="hero-copy">
-            Contabilidad, nomina, costos por proyecto y orientacion financiera
-            practica para contratistas.
+            Contabilidad profesional, nomina, costos por proyecto y orientacion
+            financiera disenada especificamente para contratistas.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary button-large" href={routeMap.es.contact}>
@@ -46,6 +70,14 @@ export default function SpanishHomePage() {
             <Link className="button button-outline button-large" href={routeMap.es.howWeHelp}>
               Ver Servicios
             </Link>
+          </div>
+          <div className="trust-row" aria-label="Indicadores de confianza Steel Beam">
+            {proofPointsEs.map((point) => (
+              <article className="trust-card" key={point}>
+                <h2>{point}</h2>
+                <p>Disenado para crear claridad, confianza y sistemas mas fuertes.</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -58,12 +90,100 @@ export default function SpanishHomePage() {
             text="Steel Beam guia a contratistas al siguiente paso practico sin hacerlos buscar respuestas."
           />
           <div className="path-grid">
-            {visitorPaths.map(([label, href]) => (
-              <Link href={href} className="path-card" key={label}>
-                <span>{label}</span>
+            {visitorPaths.map((path) => (
+              <Link href={path.href} className="path-card" key={path.label}>
+                <span>{path.label}</span>
                 <strong>Recibir guia</strong>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-soft">
+        <div className="container split">
+          <div className="portrait-card">
+            <Image
+              src="/images/founder-adam-davis.png"
+              alt="Adam Davis, fundador de Steel Beam Contractor Solutions LLC"
+              width={720}
+              height={920}
+              sizes="260px"
+            />
+          </div>
+          <div>
+            <p className="eyebrow dark">Conozca a su socio financiero de construccion</p>
+            <h2>Creado por alguien que ha estado en sus zapatos.</h2>
+            <p>
+              Steel Beam fue fundado por Adam Davis, ex dueno de empresa de
+              construccion y CFO que entiende costos por proyecto, nomina, flujo
+              de efectivo y la presion de manejar un negocio de construccion
+              porque lo ha vivido.
+            </p>
+            <p className="quote">
+              Tengo exito cuando mis clientes tienen exito. Quiero construir mi
+              empresa sobre relaciones, no sobre ventas.
+            </p>
+            <Link className="text-link" href={routeMap.es.about}>
+              Leer la historia de Adam
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="home-credentials-heading">
+        <div className="container">
+          <div className="credentials-block">
+            <div className="credentials-intro">
+              <p className="eyebrow dark">Credenciales profesionales</p>
+              <h2 id="home-credentials-heading">
+                Experiencia certificada en QuickBooks. Apoyo asesor practico.
+              </h2>
+              <p className="credentials-lede">
+                Steel Beam combina conocimiento certificado de QuickBooks con
+                orientacion financiera practica para contratistas.
+              </p>
+            </div>
+            <div className="credentials-grid">
+              <article className="credential-item">
+                <div className="credential-badge">
+                  <Image
+                    src="/images/intuit-quickbooks-level-1-certified.png"
+                    alt="Insignia Intuit ProAdvisor QuickBooks Nivel 1 certificado"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="credential-label">QuickBooks Online ProAdvisor Level 1</p>
+              </article>
+              <article className="credential-item">
+                <div className="credential-badge">
+                  <Image
+                    src="/images/intuit-cas-foundations-graduate.png"
+                    alt="Insignia Intuit ProAdvisor Client Advisory Services Foundations Graduate"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="credential-label">Client Advisory Services Foundations Graduate</p>
+              </article>
+              <article className="credential-item credential-item-secondary">
+                <div className="credential-badge credential-badge-secondary">
+                  <Image
+                    src="/images/intuit-proadvisor-silver.png"
+                    alt="Insignia Intuit ProAdvisor Silver firm-tier"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="credential-label">Intuit ProAdvisor — Silver Firm Tier</p>
+              </article>
+            </div>
+            <p className="credential-disclaimer">
+              Intuit y QuickBooks son marcas comerciales de Intuit Inc. Se
+              mencionan solo para identificar capacitacion y educacion obtenida;
+              no se implica respaldo ni asociacion.
+            </p>
           </div>
         </div>
       </section>
@@ -84,6 +204,11 @@ export default function SpanishHomePage() {
               </Link>
             ))}
           </div>
+          <div className="center-actions">
+            <Link className="button button-secondary" href={routeMap.es.howWeHelp}>
+              Ver como ayudamos
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -102,6 +227,46 @@ export default function SpanishHomePage() {
                 <small>{item.subtitle}</small>
               </div>
             ))}
+          </div>
+          <div className="center-actions">
+            <Link className="button button-primary" href={routeMap.es.journey}>
+              Explorar el proceso
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container split reverse">
+          <div>
+            <p className="eyebrow dark">Centro de Exito para Contratistas</p>
+            <h2>Recursos practicos antes de ser cliente.</h2>
+            <p>
+              El Centro de Exito esta disenado para ensenar, guiar y ofrecer
+              herramientas practicas a duenos de negocios de construccion que
+              quieren mejor claridad financiera.
+            </p>
+            <Link className="text-link" href={routeMap.es.success}>
+              Visitar el Centro de Exito
+            </Link>
+          </div>
+          <div className="resource-preview">
+            <Link href="/es/centro-de-exito-para-contratistas/flujo-de-efectivo-vs-ingresos">
+              <strong>Articulo</strong>
+              <span>Por que el flujo de efectivo importa mas que los ingresos</span>
+            </Link>
+            <Link href="/es/centro-de-exito-para-contratistas/calculadora-markup-vs-margen">
+              <strong>Calculadora</strong>
+              <span>Calculadora de markup vs margen</span>
+            </Link>
+            <Link href="/es/centro-de-exito-para-contratistas/lista-mensual-de-contabilidad">
+              <strong>Lista</strong>
+              <span>Lista mensual de contabilidad</span>
+            </Link>
+            <Link href={routeMap.es.cleanup}>
+              <strong>Limpieza</strong>
+              <span>Libros atrasados? Empiece aqui.</span>
+            </Link>
           </div>
         </div>
       </section>

@@ -50,6 +50,15 @@ export default function ListaNominaPage() {
               </label>
             ))}
           </div>
+
+          <h2>Por que importa</h2>
+          <p>
+            La nomina afecta flujo de efectivo, costos por proyecto, confianza
+            del empleado y cumplimiento fiscal. Un proceso claro ayuda a reducir
+            tiempo perdido, correcciones apresuradas y registros incompletos de
+            costo laboral.
+          </p>
+
           <div className="callout-box">
             <strong>Steel Beam Insight</strong>
             <p>

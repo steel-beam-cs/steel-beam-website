@@ -34,7 +34,14 @@ export default function CalculadoraMarkupMargenPage() {
             <h2>Estime la diferencia antes de poner precio al trabajo.</h2>
             <p>
               Markup es el porcentaje agregado sobre el costo. Margen es el
-              porcentaje del precio final que queda como ganancia bruta.
+              porcentaje del precio final que queda como ganancia bruta. Confundir
+              los dos puede reducir silenciosamente la rentabilidad del proyecto.
+            </p>
+            <p>
+              Esta herramienta es para planeacion y educacion. No reemplaza un
+              proceso completo de costos por proyecto, pero puede ayudar a los
+              contratistas a pensar con mas claridad antes de enviar la siguiente
+              propuesta.
             </p>
           </div>
           <MarkupMarginCalculator locale="es" />

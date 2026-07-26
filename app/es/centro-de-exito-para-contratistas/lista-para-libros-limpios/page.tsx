@@ -52,6 +52,14 @@ export default function LibrosLimpiosPage() {
               </label>
             ))}
           </div>
+
+          <h2>Si varias casillas no estan marcadas</h2>
+          <p>
+            Eso no significa que todo este perdido. Normalmente significa que
+            puede necesitarse trabajo de limpieza o un mejor proceso mensual de
+            documentos antes de confiar en los reportes.
+          </p>
+
           <p>
             <Link className="text-link" href="/es/limpieza-de-contabilidad">
               Aprender sobre limpieza de contabilidad

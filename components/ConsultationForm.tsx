@@ -2,10 +2,11 @@
 
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import type { Locale } from "@/components/site-data";
 
 const endpoint = "https://formspree.io/f/mqevrylw";
 
-const services = [
+const servicesEn = [
   "Monthly Bookkeeping",
   "Catch-Up / Cleanup",
   "Payroll",
@@ -16,9 +17,26 @@ const services = [
   "Not Sure Yet",
 ];
 
-export function ConsultationForm() {
+const servicesEs = [
+  "Contabilidad Mensual",
+  "Puesta al Dia / Limpieza",
+  "Nomina",
+  "Costos por Proyecto",
+  "Configuracion de QuickBooks",
+  "Base del Negocio Contratista",
+  "Reportes Financieros",
+  "No Estoy Seguro",
+];
+
+type ConsultationFormProps = {
+  locale?: Locale;
+};
+
+export function ConsultationForm({ locale = "en" }: ConsultationFormProps) {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
+  const isSpanish = locale === "es";
+  const services = isSpanish ? servicesEs : servicesEn;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -41,7 +59,7 @@ export function ConsultationForm() {
       }
 
       form.reset();
-      router.push("/thank-you");
+      router.push(isSpanish ? "/es/gracias" : "/thank-you");
     } catch {
       setStatus("error");
     }
@@ -49,57 +67,69 @@ export function ConsultationForm() {
 
   return (
     <form className="consultation-form" onSubmit={handleSubmit}>
-      <input type="hidden" name="_subject" value="New Steel Beam consultation request" />
+      <input
+        type="hidden"
+        name="_subject"
+        value={
+          isSpanish
+            ? "Nueva solicitud de consulta Steel Beam"
+            : "New Steel Beam consultation request"
+        }
+      />
       <div className="form-grid">
         <label>
-          Full name
+          {isSpanish ? "Nombre completo" : "Full name"}
           <input type="text" name="name" />
         </label>
         <label>
-          Company name
+          {isSpanish ? "Nombre de la empresa" : "Company name"}
           <input type="text" name="company" />
         </label>
         <label>
-          Email address
+          {isSpanish ? "Correo electronico" : "Email address"}
           <input type="email" name="email" />
         </label>
         <label>
-          Phone number
+          {isSpanish ? "Telefono" : "Phone number"}
           <input type="tel" name="phone" />
         </label>
         <label>
-          Contracting trade
+          {isSpanish ? "Oficio de contratista" : "Contracting trade"}
           <select name="trade" defaultValue="">
             <option value="" disabled>
-              Select one
+              {isSpanish ? "Seleccione uno" : "Select one"}
             </option>
-            <option>General Contractor</option>
-            <option>Electrical</option>
-            <option>Plumbing</option>
+            <option>{isSpanish ? "Contratista General" : "General Contractor"}</option>
+            <option>{isSpanish ? "Electrico" : "Electrical"}</option>
+            <option>{isSpanish ? "Plomeria" : "Plumbing"}</option>
             <option>HVAC</option>
-            <option>Roofing</option>
-            <option>Concrete</option>
-            <option>Remodeling</option>
-            <option>Specialty Trade</option>
+            <option>{isSpanish ? "Techos" : "Roofing"}</option>
+            <option>{isSpanish ? "Concreto" : "Concrete"}</option>
+            <option>{isSpanish ? "Remodelacion" : "Remodeling"}</option>
+            <option>
+              {isSpanish ? "Oficio Especializado" : "Specialty Trade"}
+            </option>
           </select>
         </label>
         <label>
-          Years in business
+          {isSpanish ? "Anos en el negocio" : "Years in business"}
           <select name="years" defaultValue="">
             <option value="" disabled>
-              Select one
+              {isSpanish ? "Seleccione uno" : "Select one"}
             </option>
-            <option>Just getting started</option>
-            <option>Less than 1 year</option>
-            <option>1-3 years</option>
-            <option>4-10 years</option>
-            <option>10+ years</option>
+            <option>
+              {isSpanish ? "Recien empezando" : "Just getting started"}
+            </option>
+            <option>{isSpanish ? "Menos de 1 ano" : "Less than 1 year"}</option>
+            <option>{isSpanish ? "1-3 anos" : "1-3 years"}</option>
+            <option>{isSpanish ? "4-10 anos" : "4-10 years"}</option>
+            <option>{isSpanish ? "10+ anos" : "10+ years"}</option>
           </select>
         </label>
       </div>
 
       <fieldset>
-        <legend>How can we help?</legend>
+        <legend>{isSpanish ? "Como podemos ayudar?" : "How can we help?"}</legend>
         {services.map((item) => (
           <label className="check-label" key={item}>
             <input type="checkbox" name="services" value={item} />
@@ -109,24 +139,31 @@ export function ConsultationForm() {
       </fieldset>
 
       <label>
-        What prompted you to reach out today?
+        {isSpanish
+          ? "Que le motivo a contactarnos hoy?"
+          : "What prompted you to reach out today?"}
         <textarea name="message" rows={5} />
       </label>
 
       <label>
-        What would success look like six months from now?
+        {isSpanish
+          ? "Como se veria el exito dentro de seis meses?"
+          : "What would success look like six months from now?"}
         <textarea name="success" rows={4} />
       </label>
 
       <label className="check-label">
         <input type="checkbox" name="newsletter" />
-        Yes, I would like to receive the Blueprint Brief.
+        {isSpanish
+          ? "Si, me gustaria recibir el Blueprint Brief."
+          : "Yes, I would like to receive the Blueprint Brief."}
       </label>
 
       {status === "error" ? (
         <p className="form-message error">
-          Something did not go through. Please try again, or call Steel Beam at
-          (972) 975-9445.
+          {isSpanish
+            ? "Algo no se envio correctamente. Intente de nuevo o llame a Steel Beam al (972) 975-9445."
+            : "Something did not go through. Please try again, or call Steel Beam at (972) 975-9445."}
         </p>
       ) : null}
 
@@ -135,7 +172,13 @@ export function ConsultationForm() {
         type="submit"
         disabled={status === "submitting"}
       >
-        {status === "submitting" ? "Sending..." : "Schedule My Free Consultation"}
+        {status === "submitting"
+          ? isSpanish
+            ? "Enviando..."
+            : "Sending..."
+          : isSpanish
+            ? "Programar Mi Consulta Gratis"
+            : "Schedule My Free Consultation"}
       </button>
     </form>
   );

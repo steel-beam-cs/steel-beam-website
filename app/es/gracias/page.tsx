@@ -60,6 +60,14 @@ export default function GraciasPage() {
               </a>
               .
             </p>
+            <hr />
+            <p>
+              Los documentos seguros deben compartirse por el{" "}
+              <Link className="text-link" href="/es/portal-del-cliente">
+                Portal del Cliente Steel Beam
+              </Link>
+              .
+            </p>
           </aside>
         </div>
       </section>

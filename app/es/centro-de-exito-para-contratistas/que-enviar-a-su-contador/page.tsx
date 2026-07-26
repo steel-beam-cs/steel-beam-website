@@ -52,6 +52,23 @@ export default function QueEnviarPage() {
               </label>
             ))}
           </div>
+
+          <h2>Mejor practica</h2>
+          <p>
+            Suba documentos cada mes en lugar de esperar hasta la temporada de
+            impuestos. Para contratistas, esperar demasiado hace mas dificil
+            recordar que recibo, proveedor o cargo pertenece a que proyecto.
+          </p>
+
+          <div className="callout-box">
+            <strong>Steel Beam Insight</strong>
+            <p>
+              Un buen habito de documentos es una de las formas mas faciles de
+              mejorar costos por proyecto, revisiones de flujo de efectivo y
+              coordinacion con CPA al cierre del ano.
+            </p>
+          </div>
+
           <p>
             <Link className="text-link" href="/es/portal-del-cliente">
               Ver intercambio seguro de documentos
