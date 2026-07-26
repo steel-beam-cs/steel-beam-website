@@ -104,6 +104,70 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section
+        className="section section-soft"
+        aria-labelledby="credentials-heading"
+      >
+        <div className="container">
+          <div className="credentials-block">
+            <div className="credentials-intro">
+              <p className="eyebrow dark">Professional credentials</p>
+              <h2 id="credentials-heading">
+                Certified QuickBooks expertise. Practical advisory support.
+              </h2>
+              <p className="credentials-lede">
+                Steel Beam combines certified QuickBooks knowledge with
+                practical financial guidance built for contractors.
+              </p>
+            </div>
+
+            <div className="credentials-grid">
+              <article className="credential-item">
+                <div className="credential-badge">
+                  <Image
+                    src="/images/intuit-quickbooks-level-1-certified.png"
+                    alt="Intuit ProAdvisor QuickBooks Level 1 Certified badge"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="credential-label">
+                  QuickBooks Online ProAdvisor Level 1
+                </p>
+              </article>
+
+              <article className="credential-item">
+                <div className="credential-badge">
+                  <Image
+                    src="/images/intuit-cas-foundations-graduate.png"
+                    alt="Intuit ProAdvisor Client Advisory Services Foundations Graduate badge"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="credential-label">
+                  Client Advisory Services Foundations Graduate
+                </p>
+              </article>
+
+              <article className="credential-item credential-item-secondary">
+                <div className="credential-badge credential-badge-secondary">
+                  <Image
+                    src="/images/intuit-proadvisor-silver.png"
+                    alt="Intuit ProAdvisor Silver firm-tier badge"
+                    width={600}
+                    height={600}
+                  />
+                </div>
+                <p className="credential-label">
+                  Intuit ProAdvisor — Silver Firm Tier
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section section-navy">
         <div className="container">
           <SectionHeading
