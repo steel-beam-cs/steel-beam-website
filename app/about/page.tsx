@@ -62,9 +62,10 @@ export default function AboutPage() {
             </p>
             <p>
               That construction experience remains the foundation of Steel
-              Beam&apos;s work. Adam is also Intuit Bookkeeping Certified and
-              continues professional education through Intuit Academy while
-              working toward QuickBooks ProAdvisor certification.
+              Beam&apos;s work. Adam is Intuit Bookkeeping Certified, a
+              QuickBooks Online ProAdvisor Level 1, and a graduate of Client
+              Advisory Services Foundations. He continues professional education
+              through Intuit&apos;s ProAdvisor Academy.
             </p>
             <p className="quote">
               Steel Beam was not built from theory. It was built from
@@ -88,40 +89,6 @@ export default function AboutPage() {
                 <p>{item}</p>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container credential-section">
-          <div>
-            <p className="eyebrow dark">Professional Credentials</p>
-            <h2>Construction Experience + Certified Bookkeeping Expertise.</h2>
-            <p>
-              The credential is third-party validation of bookkeeping training;
-              the deeper value is Adam&apos;s practical experience managing
-              contractor books, payroll, job costing, reporting, and cash flow
-              from inside a construction business.
-            </p>
-            <ul className="credential-list">
-              <li>Intuit Bookkeeping Certified</li>
-              <li>Continuing professional education through Intuit Academy</li>
-              <li>Working toward QuickBooks ProAdvisor certification</li>
-            </ul>
-            <p className="credential-disclaimer">
-              Intuit and QuickBooks are trademarks of Intuit Inc. Used here only
-              to identify earned training and education; no endorsement or
-              partnership is implied.
-            </p>
-          </div>
-          <div className="credential-badge" aria-label="Intuit Bookkeeping Certified badge">
-            <Image
-              src="/images/intuit-bookkeeping-certification.png"
-              alt="Intuit Bookkeeping certification badge"
-              width={320}
-              height={320}
-              sizes="160px"
-            />
           </div>
         </div>
       </section>
@@ -204,6 +171,11 @@ export default function AboutPage() {
                 </p>
               </article>
             </div>
+            <p className="credential-disclaimer">
+              Intuit and QuickBooks are trademarks of Intuit Inc. Used here only
+              to identify earned training and education; no endorsement or
+              partnership is implied.
+            </p>
           </div>
         </div>
       </section>
