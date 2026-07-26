@@ -62,6 +62,15 @@ a {
   color: inherit;
 }
 
+.language-link {
+  color: var(--charcoal-black);
+  font-size: 0.9rem;
+  font-weight: 850;
+  text-decoration: underline;
+  text-decoration-color: var(--construction-orange);
+  text-underline-offset: 4px;
+}
+
 img {
   max-width: 100%;
 }
@@ -683,15 +692,17 @@ img {
   text-align: center;
 }
 
-.credential-badge {
+.credentials-grid .credential-badge {
+  justify-self: auto;
+  max-width: 100%;
   width: 112px;
 }
 
-.credential-badge-secondary {
+.credentials-grid .credential-badge-secondary {
   width: 92px;
 }
 
-.credential-badge img {
+.credentials-grid .credential-badge img {
   display: block;
   height: auto;
   width: 100%;
@@ -709,6 +720,12 @@ img {
   font-size: 0.88rem;
 }
 
+.credentials-block .credential-disclaimer {
+  margin: 24px auto 0;
+  max-width: 38rem;
+  text-align: center;
+}
+
 .quote {
   margin-top: 24px;
   padding-left: 20px;
@@ -716,6 +733,75 @@ img {
   color: var(--steel-navy) !important;
   font-size: 1.25rem !important;
   font-style: italic;
+}
+
+.credential-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 44px;
+  align-items: center;
+}
+
+.credential-section h2 {
+  max-width: 820px;
+  margin: 0;
+  color: var(--charcoal-black);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.credential-section p {
+  max-width: 820px;
+  color: #4b5563;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.credential-list {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.credential-list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--steel-navy);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.credential-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--construction-orange);
+}
+
+.credential-disclaimer {
+  margin-top: 22px;
+  color: var(--structural-steel) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.55 !important;
+}
+
+.credential-badge {
+  justify-self: center;
+  width: 180px;
+  max-width: 100%;
+}
+
+.credential-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .center-actions {
@@ -1582,16 +1668,26 @@ fieldset {
     grid-template-columns: 1fr;
   }
 
-  .credential-badge {
+  .credentials-grid .credential-badge {
     width: 100px;
   }
 
-  .credential-badge-secondary {
+  .credentials-grid .credential-badge-secondary {
     width: 84px;
   }
 
   .credential-label {
     max-width: 18rem;
+  }
+
+  .credential-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .credential-section .credential-badge {
+    justify-self: start;
+    width: 150px;
   }
 }
 

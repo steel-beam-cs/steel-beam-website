@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function ThankYouPage() {
   return (
-    <PageShell>
+    <PageShell currentPath="/thank-you">
       <section className="page-hero">
         <div className="blueprint-grid" />
         <div className="container page-hero-inner">

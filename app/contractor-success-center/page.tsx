@@ -4,6 +4,7 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
+import { downloads } from "@/components/site-data";
 
 export const metadata: Metadata = {
   title: "Contractor Success Center",
@@ -163,6 +164,26 @@ export default function SuccessCenterPage() {
               Join the list
             </button>
           </form>
+        </div>
+      </section>
+
+      <section className="section section-soft">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Download Center"
+            title="Client documents in English and Spanish."
+            text="Use these resources to prepare for intake, onboarding, monthly document sharing, and common questions."
+          />
+          <div className="card-grid three resource-directory">
+            {downloads.en.map(([title, href]) => (
+              <Link className="info-card resource-link-card" href={href} key={href}>
+                <strong>Download</strong>
+                <h3>{title}</h3>
+                <p>Client resource for contractor onboarding, organization, or support.</p>
+                <span>Open resource</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

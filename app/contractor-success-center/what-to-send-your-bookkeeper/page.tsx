@@ -28,7 +28,7 @@ const documents = [
 
 export default function WhatToSendBookkeeperPage() {
   return (
-    <PageShell>
+    <PageShell currentPath="/contractor-success-center/what-to-send-your-bookkeeper">
       <PageHero
         eyebrow="Success Center"
         title="What to send your bookkeeper each month."
