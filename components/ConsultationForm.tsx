@@ -32,18 +32,35 @@ type ConsultationFormProps = {
   locale?: Locale;
 };
 
+type FormStatus = "idle" | "submitting" | "validation" | "error";
+
 export function ConsultationForm({ locale = "en" }: ConsultationFormProps) {
   const router = useRouter();
-  const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
+  const [status, setStatus] = useState<FormStatus>("idle");
   const isSpanish = locale === "es";
   const services = isSpanish ? servicesEs : servicesEn;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus("submitting");
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const phone = String(formData.get("phone") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const selectedServices = formData.getAll("services");
+
+    if (
+      !name ||
+      (!email && !phone) ||
+      (!message && selectedServices.length === 0)
+    ) {
+      setStatus("validation");
+      return;
+    }
+
+    setStatus("submitting");
 
     try {
       const response = await fetch(endpoint, {
@@ -66,7 +83,20 @@ export function ConsultationForm({ locale = "en" }: ConsultationFormProps) {
   }
 
   return (
-    <form className="consultation-form" onSubmit={handleSubmit}>
+    <form
+      className="consultation-form"
+      onChange={() => {
+        if (status === "validation" || status === "error") {
+          setStatus("idle");
+        }
+      }}
+      onSubmit={handleSubmit}
+      aria-describedby={
+        status === "validation" || status === "error"
+          ? "consultation-form-message"
+          : undefined
+      }
+    >
       <input
         type="hidden"
         name="_subject"
@@ -76,22 +106,45 @@ export function ConsultationForm({ locale = "en" }: ConsultationFormProps) {
             : "New Steel Beam consultation request"
         }
       />
+
+      <div
+        aria-hidden="true"
+        style={{
+          height: 1,
+          left: -10000,
+          overflow: "hidden",
+          position: "absolute",
+          top: "auto",
+          width: 1,
+        }}
+      >
+        <label>
+          Leave this field blank
+          <input
+            type="text"
+            name="_gotcha"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </label>
+      </div>
+
       <div className="form-grid">
         <label>
           {isSpanish ? "Nombre completo" : "Full name"}
-          <input type="text" name="name" />
+          <input type="text" name="name" autoComplete="name" required />
         </label>
         <label>
           {isSpanish ? "Nombre de la empresa" : "Company name"}
-          <input type="text" name="company" />
+          <input type="text" name="company" autoComplete="organization" />
         </label>
         <label>
           {isSpanish ? "Correo electronico" : "Email address"}
-          <input type="email" name="email" />
+          <input type="email" name="email" autoComplete="email" />
         </label>
         <label>
           {isSpanish ? "Telefono" : "Phone number"}
-          <input type="tel" name="phone" />
+          <input type="tel" name="phone" autoComplete="tel" />
         </label>
         <label>
           {isSpanish ? "Oficio de contratista" : "Contracting trade"}
@@ -159,8 +212,24 @@ export function ConsultationForm({ locale = "en" }: ConsultationFormProps) {
           : "Yes, I would like to receive the Blueprint Brief."}
       </label>
 
+      {status === "validation" ? (
+        <p
+          className="form-message error"
+          id="consultation-form-message"
+          role="alert"
+        >
+          {isSpanish
+            ? "Proporcione su nombre, un correo electronico o numero de telefono, y seleccione un servicio o describa lo que necesita."
+            : "Please provide your name, either an email address or phone number, and either select a service or describe what you need."}
+        </p>
+      ) : null}
+
       {status === "error" ? (
-        <p className="form-message error">
+        <p
+          className="form-message error"
+          id="consultation-form-message"
+          role="alert"
+        >
           {isSpanish
             ? "Algo no se envio correctamente. Intente de nuevo o llame a Steel Beam al (972) 975-9445."
             : "Something did not go through. Please try again, or call Steel Beam at (972) 975-9445."}
