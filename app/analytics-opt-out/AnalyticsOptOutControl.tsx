@@ -10,12 +10,16 @@ export function AnalyticsOptOutControl() {
   const [status, setStatus] = useState<AnalyticsStatus>("checking");
 
   useEffect(() => {
+    let nextStatus: AnalyticsStatus;
     try {
       window.localStorage.setItem(ANALYTICS_OPT_OUT_KEY, "1");
-      setStatus("disabled");
+      nextStatus = "disabled";
     } catch {
-      setStatus("error");
+      nextStatus = "error";
     }
+
+    const statusUpdate = window.setTimeout(() => setStatus(nextStatus), 0);
+    return () => window.clearTimeout(statusUpdate);
   }, []);
 
   function disableAnalytics() {

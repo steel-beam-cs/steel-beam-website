@@ -4,8 +4,13 @@ export const contact = {
   infoEmail: "info@steel-beam.org",
   supportEmail: "support@steel-beam.org",
   billingEmail: "billing@steel-beam.org",
-  shareFileUrl: "https://steelbeam.sharefile.com",
 };
+
+export const clientPortalNotice =
+  "Existing Steel Beam clients receive a private Google Drive client portal invitation at their authorized email address. The private portal is used to upload documents, receive reports, and access client resources.";
+
+export const clientPortalNoticeEs =
+  "Los clientes existentes de Steel Beam reciben una invitacion privada al portal del cliente en Google Drive en su direccion de email autorizada. El portal privado se usa para subir documentos, recibir reportes y acceder a recursos para clientes.";
 
 export type Locale = "en" | "es";
 
@@ -289,7 +294,7 @@ export const milestonesEs = [
 
 export const proofPointsEs = [
   "Enfocado en contratistas",
-  "Portal seguro del cliente",
+  "Portal privado del cliente",
   "Precios mensuales fijos",
   "Creado por un ex contratista",
 ];

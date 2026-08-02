@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
-import { contact, routeMap, spanishSupportNote } from "@/components/site-data";
+import {
+  clientPortalNoticeEs,
+  contact,
+  routeMap,
+  spanishSupportNote,
+} from "@/components/site-data";
 
 export const metadata: Metadata = {
   title: "Preguntas Frecuentes",
@@ -25,7 +30,7 @@ const faqs = [
   ],
   [
     "Como envio documentos?",
-    `Use el portal seguro ShareFile cuando sea practico: ${contact.shareFileUrl}`,
+    clientPortalNoticeEs,
   ],
   [
     "Ofrecen nomina?",
@@ -45,7 +50,7 @@ const faqs = [
   ],
   [
     "Que pasa si recibo un aviso del IRS o del estado?",
-    "Suba el aviso por ShareFile y contactenos pronto. Revisaremos la situacion y coordinaremos con su CPA o abogado cuando sea necesario.",
+    "Si es un cliente activo, suba el aviso a su portal privado del cliente en Google Drive y contactenos pronto. Revisaremos la situacion y coordinaremos con su CPA o abogado cuando sea necesario.",
   ],
   [
     "Que pasa si no entiendo mis reportes?",

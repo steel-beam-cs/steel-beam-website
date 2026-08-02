@@ -63,7 +63,7 @@ export default function ThankYouPage() {
             </p>
             <hr />
             <p>
-              Secure documents should be shared through the{" "}
+              Existing clients should share secure documents through the{" "}
               <Link className="text-link" href="/client-portal">
                 Steel Beam Client Portal
               </Link>

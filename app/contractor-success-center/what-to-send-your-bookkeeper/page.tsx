@@ -69,7 +69,7 @@ export default function WhatToSendBookkeeperPage() {
 
           <p>
             <Link className="text-link" href="/client-portal">
-              See secure document sharing
+              Learn about private client portal access
             </Link>
           </p>
         </article>

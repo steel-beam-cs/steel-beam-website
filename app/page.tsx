@@ -44,7 +44,7 @@ const visitorPaths = [
 
 const proofPoints = [
   "Contractor-focused",
-  "Secure client portal",
+  "Private client portal",
   "Fixed monthly pricing",
   "Built by a former contractor",
 ];

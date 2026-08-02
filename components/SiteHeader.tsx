@@ -53,7 +53,7 @@ export function SiteHeader({
             {isSpanish ? "English" : "Espanol"}
           </Link>
           <Link className="button button-portal" href={isSpanish ? routeMap.es.portal : routeMap.en.portal}>
-            {isSpanish ? "Portal del Cliente" : "Client Portal"}
+            {isSpanish ? "Ayuda del Portal" : "Client Portal Help"}
           </Link>
           <Link className="button button-primary" href={isSpanish ? routeMap.es.contact : routeMap.en.contact}>
             {isSpanish ? "Consulta Gratis" : "Free Consultation"}
@@ -92,7 +92,7 @@ export function SiteHeader({
             href={isSpanish ? routeMap.es.portal : routeMap.en.portal}
             onClick={closeMenu}
           >
-            {isSpanish ? "Portal del Cliente" : "Client Portal"}
+            {isSpanish ? "Ayuda del Portal" : "Client Portal Help"}
           </Link>
           <Link
             className="button button-primary"

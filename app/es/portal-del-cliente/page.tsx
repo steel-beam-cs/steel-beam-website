@@ -3,12 +3,16 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
-import { contact, portalUploadsEs, routeMap } from "@/components/site-data";
+import {
+  clientPortalNoticeEs,
+  contact,
+  portalUploadsEs,
+  routeMap,
+} from "@/components/site-data";
 
 export const metadata: Metadata = {
-  title: "Portal Seguro del Cliente",
-  description:
-    "Acceda al portal seguro ShareFile de Steel Beam para intercambio confidencial de documentos, registros financieros, reportes de nomina, facturas y apoyo al cliente.",
+  title: "Portal del Cliente de Steel Beam",
+  description: clientPortalNoticeEs,
   alternates: {
     canonical: routeMap.es.portal,
     languages: { en: routeMap.en.portal, es: routeMap.es.portal },
@@ -19,41 +23,38 @@ export default function PortalDelClientePage() {
   return (
     <PageShell locale="es" currentPath={routeMap.es.portal}>
       <PageHero
-        eyebrow="Portal Seguro del Cliente"
-        title="Una forma segura de compartir su informacion financiera."
-        text="Steel Beam usa ShareFile para la carga e intercambio seguro de documentos confidenciales del negocio."
-        primaryLabel="Abrir Portal Seguro"
-        primaryHref={contact.shareFileUrl}
+        eyebrow="Acceso y Ayuda para Clientes Existentes"
+        title="Portal del Cliente de Steel Beam"
+        text={clientPortalNoticeEs}
+        primaryLabel="Enviar Email a Adam"
+        primaryHref={`mailto:${contact.founderEmail}`}
       />
 
       <section className="section">
         <div className="container split">
           <div>
-            <p className="status-pill">Estado del Portal: Operativo</p>
-            <h2>Por que usamos ShareFile</h2>
+            <p className="status-pill">Solo Invitaciones Privadas</p>
+            <h2>Como funciona el acceso al portal</h2>
             <p>
-              Sus registros financieros merecen mas que conveniencia. ShareFile
-              ofrece un proceso profesional de intercambio de documentos que
-              ayuda a reducir el riesgo de exponer informacion sensible por
-              email normal.
+              Steel Beam crea un portal separado para cada cliente activo y
+              envia acceso solo al email autorizado. No existe un enlace publico
+              a una carpeta de Google Drive.
             </p>
             <a
               className="button button-primary"
-              href={contact.shareFileUrl}
-              target="_blank"
-              rel="noreferrer"
+              href={`mailto:${contact.founderEmail}`}
             >
-              Acceder al portal
+              Enviar email a Adam para ayuda
             </a>
           </div>
           <div className="panel">
-            <h3>Guia para primer uso</h3>
+            <h3>Guia de invitacion y acceso</h3>
             <ol className="number-list">
-              <li>Haga clic en el boton Abrir Portal Seguro.</li>
-              <li>Inicie sesion o cree su cuenta.</li>
-              <li>Seleccione su carpeta.</li>
-              <li>Suba o arrastre sus archivos.</li>
-              <li>Contacte soporte si necesita ayuda.</li>
+              <li>Busque un email de invitacion de Google Drive enviado por Steel Beam.</li>
+              <li>Abra la invitacion con la direccion de email que la recibio.</li>
+              <li>Siga las instrucciones de inicio de sesion o verificacion de Google.</li>
+              <li>Use las carpetas compartidas para cargas, reportes y recursos.</li>
+              <li>Contacte soporte si falta la invitacion o falla el acceso.</li>
             </ol>
           </div>
         </div>
@@ -83,18 +84,30 @@ export default function PortalDelClientePage() {
             seguridad.
           </p>
           <p>
-            Necesita ayuda? Llame al {contact.phone} o envie email a{" "}
-            <a className="text-link" href={`mailto:${contact.supportEmail}`}>
-              {contact.supportEmail}
+            Para ayuda con el acceso, contacte a:
+          </p>
+          <p>
+            <strong>Adam Davis</strong>
+            <br />
+            Steel Beam Contractor Solutions LLC
+            <br />
+            <a className="text-link" href={`mailto:${contact.founderEmail}`}>
+              {contact.founderEmail}
             </a>
-            .
+            <br />
+            <a
+              className="text-link"
+              href={`tel:${contact.phone.replace(/[^0-9]/g, "")}`}
+            >
+              {contact.phone}
+            </a>
           </p>
         </div>
       </section>
 
       <CTASection
         title="Necesita ayuda para acceder al portal?"
-        text="Contacte soporte antes de enviar informacion financiera confidencial por email."
+        text="Contacte a Adam antes de enviar informacion financiera confidencial por email."
       />
     </PageShell>
   );

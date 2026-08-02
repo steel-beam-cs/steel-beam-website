@@ -68,7 +68,7 @@ export function SiteFooter({
           <div>
             <h3>{isSpanish ? "Acceso del Cliente" : "Client Access"}</h3>
             <Link href={isSpanish ? routeMap.es.portal : routeMap.en.portal}>
-              {isSpanish ? "Portal Seguro del Cliente" : "Secure Client Portal"}
+              {isSpanish ? "Acceso y Ayuda del Portal" : "Client Portal Access & Help"}
             </Link>
             <Link href={isSpanish ? routeMap.es.contact : routeMap.en.contact}>
               {isSpanish ? "Programar Consulta" : "Schedule Consultation"}

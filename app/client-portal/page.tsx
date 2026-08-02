@@ -3,12 +3,11 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeading } from "@/components/SectionHeading";
-import { contact } from "@/components/site-data";
+import { clientPortalNotice, contact } from "@/components/site-data";
 
 export const metadata: Metadata = {
-  title: "Secure Client Portal",
-  description:
-    "Access Steel Beam's secure ShareFile portal for confidential document exchange, financial records, payroll reports, invoices, and client support.",
+  title: "Steel Beam Client Portal",
+  description: clientPortalNotice,
   alternates: {
     canonical: "/client-portal",
   },
@@ -29,41 +28,38 @@ export default function ClientPortalPage() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Secure Client Portal"
-        title="A secure way to share your financial information."
-        text="Steel Beam uses ShareFile for the secure upload and exchange of confidential business documents."
-        primaryLabel="Access Secure Client Portal"
-        primaryHref={contact.shareFileUrl}
+        eyebrow="Existing Client Portal Access & Help"
+        title="Steel Beam Client Portal"
+        text={clientPortalNotice}
+        primaryLabel="Email Adam for Access Help"
+        primaryHref={`mailto:${contact.founderEmail}`}
       />
 
       <section className="section">
         <div className="container split">
           <div>
-            <p className="status-pill">Portal Status: Operational</p>
-            <h2>Why we use ShareFile</h2>
+            <p className="status-pill">Private Invitations Only</p>
+            <h2>How portal access works</h2>
             <p>
-              Your financial records deserve more than convenience. ShareFile
-              provides a professional document exchange process that helps
-              reduce the risk of sensitive information being exposed through
-              standard email.
+              Steel Beam creates a separate client-facing portal for each
+              active client and sends access only to the authorized email
+              address. There is no public Google Drive folder link.
             </p>
             <a
               className="button button-primary"
-              href={contact.shareFileUrl}
-              target="_blank"
-              rel="noreferrer"
+              href={`mailto:${contact.founderEmail}`}
             >
-              Access the portal
+              Email Adam for portal help
             </a>
           </div>
           <div className="panel">
-            <h3>First-time user guide</h3>
+            <h3>Invitation and access guide</h3>
             <ol className="number-list">
-              <li>Click the Access Secure Client Portal button.</li>
-              <li>Sign in or create your account.</li>
-              <li>Select your folder.</li>
-              <li>Upload or drag and drop your files.</li>
-              <li>Contact support if you need help.</li>
+              <li>Look for a Google Drive invitation email from Steel Beam.</li>
+              <li>Open the invitation using the email address it was sent to.</li>
+              <li>Follow Google&apos;s sign-in or verification instructions.</li>
+              <li>Use the shared folders for uploads, reports, and resources.</li>
+              <li>Contact support if the invitation is missing or access fails.</li>
             </ol>
           </div>
         </div>
@@ -92,18 +88,30 @@ export default function ClientPortalPage() {
             continuously improve our security practices.
           </p>
           <p>
-            Need help? Call {contact.phone} or email{" "}
-            <a className="text-link" href={`mailto:${contact.supportEmail}`}>
-              {contact.supportEmail}
+            For access assistance, contact:
+          </p>
+          <p>
+            <strong>Adam Davis</strong>
+            <br />
+            Steel Beam Contractor Solutions LLC
+            <br />
+            <a className="text-link" href={`mailto:${contact.founderEmail}`}>
+              {contact.founderEmail}
             </a>
-            .
+            <br />
+            <a
+              className="text-link"
+              href={`tel:${contact.phone.replace(/[^0-9]/g, "")}`}
+            >
+              {contact.phone}
+            </a>
           </p>
         </div>
       </section>
 
       <CTASection
         title="Need help accessing the portal?"
-        text="Contact support before sending confidential financial information by email."
+        text="Contact Adam before sending confidential financial information by email."
       />
     </PageShell>
   );

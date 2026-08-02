@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { PageShell } from "@/components/PageShell";
-import { contact } from "@/components/site-data";
+import { clientPortalNotice, contact } from "@/components/site-data";
 
 export const metadata: Metadata = {
   title: "FAQs",
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 const faqs = [
   ["How do I become a client?", "It starts with a free consultation. We learn about your business, answer questions, and recommend the right next step."],
   ["Do you only work with contractors?", "Steel Beam was built specifically for contractors and construction-related businesses."],
-  ["How do I send documents?", `Use the secure ShareFile portal whenever practical: ${contact.shareFileUrl}`],
+  ["How do I send documents?", clientPortalNotice],
   ["Do you offer payroll?", "Yes. Payroll is available as a standalone service and can complement monthly bookkeeping."],
   ["Can you help if my books are behind?", "Yes. Catch-up and cleanup bookkeeping are available after we review the scope."],
   ["Can you help with business startup planning?", "Yes. Contractor Business Foundation helps new and growing contractors establish practical financial systems."],
   ["How much do services cost?", "Monthly packages start at fixed monthly rates, with custom quotes available when a project requires additional scope or complexity."],
-  ["What if I receive an IRS or state notice?", "Upload the notice through ShareFile and contact us promptly. We will review the situation and coordinate with your CPA or attorney when needed."],
+  ["What if I receive an IRS or state notice?", "If you are an active client, upload the notice through your private Google Drive client portal and contact us promptly. We will review the situation and coordinate with your CPA or attorney when needed."],
   ["What if I do not understand my reports?", "That is exactly why we are here. We explain reports in plain language and connect the numbers to decisions."],
 ];
 

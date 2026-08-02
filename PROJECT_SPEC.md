@@ -45,7 +45,7 @@ This specification is the source of truth for the public website build.
 - General inquiries: `info@steel-beam.org`
 - Support: `support@steel-beam.org`
 - Billing: `billing@steel-beam.org`
-- ShareFile portal: `https://steelbeam.sharefile.com`
+- Client portal: private Google Drive invitations are sent by email to active clients; no public folder link is provided.
 
 ## Site Architecture
 
@@ -54,7 +54,7 @@ This specification is the source of truth for the public website build.
 3. How We Help
 4. The Steel Beam Client Journey
 5. Contractor Success Center
-6. Secure Client Portal
+6. Client Portal Access & Help
 7. Answers Before You Need Them
 8. Let's Start the Conversation
 
@@ -120,12 +120,13 @@ Include:
 - Blueprint Brief newsletter concept
 - Contractor Success Stories future area
 
-### Secure Client Portal
+### Client Portal Access & Help
 
 Purpose: reassure clients that document handling is professional and secure.
 
 Include:
-- ShareFile URL and CTA.
+- Private Google Drive invitation instructions for active clients only.
+- No public Google Drive folder link.
 - What to upload.
 - First-time user guide.
 - Security promise.

@@ -71,7 +71,7 @@ export default function QueEnviarPage() {
 
           <p>
             <Link className="text-link" href="/es/portal-del-cliente">
-              Ver intercambio seguro de documentos
+              Conozca el acceso al portal privado del cliente
             </Link>
           </p>
         </article>
