@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Steel Beam Contractor Solutions
 
-## Getting Started
+The production website for **Steel Beam Contractor Solutions LLC**, providing contractor-focused bookkeeping, payroll coordination, job costing, cleanup work, QuickBooks support, and practical financial guidance.
 
-First, run the development server:
+## Production
+
+- `https://steel-beam.org`
+- `https://www.steel-beam.org`
+- Vercel project: `steel-beam-website`
+- Production branch: `main`
+
+## Stack
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Vercel hosting and Web Analytics
+- Formspree consultation intake
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Validation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+Review the Vercel preview at desktop and mobile widths before merging.
 
-To learn more about Next.js, take a look at the following resources:
+## Important integrations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The English and Spanish consultation forms submit through Formspree from `components/ConsultationForm.tsx`.
+- Successful English submissions route to `/thank-you`.
+- Successful Spanish submissions route to `/es/gracias`.
+- Vercel Web Analytics is installed through `@vercel/analytics`.
+- The site includes private owner analytics opt-out controls.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Main routes
 
-## Deploy on Vercel
+- `/` — homepage
+- `/how-we-help` — services and outcomes
+- `/cleanup-bookkeeping` — catch-up and cleanup support
+- `/contractor-success-center` — contractor resources
+- `/client-journey` — Steel Beam process
+- `/contact` — consultation form
+- `/es` — Spanish-language site
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Operating rules
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use only approved Steel Beam services, credentials, pricing, contact information, and business claims. Do not imply that Steel Beam provides legal services, tax preparation, or bilingual professional services beyond approved language assistance.
+
+See [`OPERATIONS.md`](./OPERATIONS.md) for the required branch, Vercel preview, pull-request, and production-verification workflow.
